@@ -67,9 +67,12 @@ export const Home = () => {
         >
           LinkedIn
         </a>
-        <button className="text-[#387C6D] text-[19px] font-montserrat shadow-button border border-2 border-[#387C6D] rounded-[13px] px-[32px] py-[16px] ml-[64px]">
+        <a
+          href="mailto: cbmatthias@gmail.com"
+          className="text-[#387C6D] text-[19px] font-montserrat shadow-button border border-2 border-[#387C6D] rounded-[13px] px-[32px] py-[16px] ml-[64px]"
+        >
           Email
-        </button>
+        </a>
       </div>
       <div className="flex justify-between w-full max-w-[992px] py-[16px] mt-[32px]">
         <div className="flex">

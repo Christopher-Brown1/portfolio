@@ -21,12 +21,14 @@ export const HomeProject = (props) => {
         <h4 className="mb-[64px] text-[36px] text-[#343F56] font-montserrat">
           {props.title}
         </h4>
-        <p className="text-[$343F56] mb-[16px]">{props.descriptionOne}</p>
+        <p className="text-[$343F56] mb-[16px] text-left">
+          {props.descriptionOne}
+        </p>
         {props.descriptionTwo && (
-          <p className="text-[$343F56]">{props.descriptionTwo}</p>
+          <p className="text-[$343F56] text-left">{props.descriptionTwo}</p>
         )}
         <button
-          className="text-[#387C6D] text-[19px] font-montserrat shadow-button border border-2 border-[#387C6D] rounded-[13px] px-[32px] py-[16px] ml-[64px]"
+          className="text-[#387C6D] text-[19px] font-montserrat shadow-button border border-2 border-[#387C6D] rounded-[13px] px-[32px] py-[16px] ml-[64px] mt-[64px]"
           onClick={() => navigate(`project/${props.i + 1}`)}
         >
           View case study
