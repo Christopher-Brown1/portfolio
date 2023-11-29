@@ -1,7 +1,11 @@
 import React from "react";
 import HomeProject from "../components/HomeProject";
+import FigmaLogo from "../assets/home/logos_figma.svg";
+import GoogleLogo from "../assets/home/devicon_google.svg";
+import UXLogo from "../assets/home/ux_research.svg";
+import HtmlLogo from "../assets/home/html.svg";
 
-const PROJECTS = [
+export const PROJECTS = [
   {
     title: "Survivor Companion App",
     descriptionOne:
@@ -56,45 +60,44 @@ export const Home = () => {
         for life’s tech problems, and make it look good in the process!
       </p>
       <div className="inline-block mt-[32px]">
-        <button className="text-[#387C6D] text-[19px] font-montserrat shadow-button border border-2 border-[#387C6D] rounded-[13px] px-[32px] py-[16px]">
-          Resume
-        </button>
         <a
-          href="https://www.linkedin.com/in/chrisbrownuiux/"
+          className="text-[#387C6D] text-[19px] font-montserrat shadow-button border border-2 border-[#387C6D] rounded-[13px] px-[32px] py-[16px]"
+          href={`${process.env.PUBLIC_URL}/christopher_resume.pdf`}
+          rel="noreferrer"
+          target="_blank"
+        >
+          Resume
+        </a>
+        <a
           className="text-[#387C6D] text-[19px] font-montserrat shadow-button border border-2 border-[#387C6D] rounded-[13px] px-[32px] py-[16px] ml-[64px]"
+          href="https://www.linkedin.com/in/chrisbrownuiux/"
           rel="noopener noreferrer"
           target="_blank"
         >
           LinkedIn
         </a>
         <a
-          href="mailto: cbmatthias@gmail.com"
           className="text-[#387C6D] text-[19px] font-montserrat shadow-button border border-2 border-[#387C6D] rounded-[13px] px-[32px] py-[16px] ml-[64px]"
+          href="mailto: chrisbrownuiux@gmail.com"
         >
           Email
         </a>
       </div>
       <div className="flex justify-between w-full max-w-[992px] py-[16px] mt-[32px]">
         <div className="flex">
-          <img alt="figma logo" className="h-[50px] w-[50px] bg-[#E9896A]" />
+          <img alt="figma logo" src={FigmaLogo} />
           <h4>Figma</h4>
         </div>
         <div className="flex">
-          <img alt="google logo" className="h-[50px] w-[50px] bg-[#E9896A]" />
+          <img alt="google logo" src={GoogleLogo} />
           <h4>Google Workspace</h4>
         </div>
         <div className="flex">
-          <img
-            alt="test tube icon"
-            className="h-[50px] w-[50px] bg-[#E9896A]"
-          />
+          <img alt="test tube icon" src={UXLogo} />
           <h4>UX Research</h4>
         </div>
         <div className="flex">
-          <img
-            alt="code block icon"
-            className="h-[50px] w-[50px] bg-[#E9896A]"
-          />
+          <img alt="code block icon" src={HtmlLogo} />
           <h4>Basic HTML, CSS, and JS</h4>
         </div>
       </div>
@@ -103,7 +106,7 @@ export const Home = () => {
         My Work
       </h3>
       {PROJECTS.map((project, i) => (
-        <HomeProject {...project} i={i} />
+        <HomeProject {...project} i={i} key={i} />
       ))}
     </div>
   );

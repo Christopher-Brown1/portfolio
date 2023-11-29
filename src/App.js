@@ -1,15 +1,23 @@
 import { lazy, Suspense } from "react";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useNavigate } from "react-router-dom";
 
-const Home = lazy(() => import("./views/Home"));
-const Project = lazy(() => import("./views/Project"));
+import { Home } from "./views/Home";
+import { Projects } from "./views/Projects";
+const Survivor = lazy(() => import("./projects/Survivor"));
+const AppleMusic = lazy(() => import("./projects/AppleMusic"));
+const Goodreads = lazy(() => import("./projects/Goodreads"));
 
 function App() {
+  const navigate = useNavigate();
+
   return (
     <div className="App bg-[#F8F5F1]">
       {/* Header */}
-      <div className="w-full max-w-[992px] mx-auto">
-        <h1 className="font-megrim text-[48px] font-medium pt-[48px]">
+      <div className="w-full border-b-[2px] border-[#343F56] pl-[80px]">
+        <h1
+          className="font-megrim text-[48px] font-medium pt-[48px] cursor-pointer"
+          onClick={() => navigate("/")}
+        >
           Christopher Brown
         </h1>
       </div>
@@ -18,7 +26,11 @@ function App() {
       <Suspense fallback={<div className="container">Loading...</div>}>
         <Routes>
           <Route exact path="/" element={<Home />} />
-          <Route exact path="/project/:slug" element={<Project />} />
+          <Route exact path="/project" element={<Projects />}>
+            <Route exact path="/project/1" element={<Survivor />} />
+            <Route exact path="/project/2" element={<AppleMusic />} />
+            <Route exact path="/project/3" element={<Goodreads />} />
+          </Route>
           <Route path="*" element={<Home />} />
         </Routes>
       </Suspense>

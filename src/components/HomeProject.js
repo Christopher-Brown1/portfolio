@@ -16,7 +16,9 @@ export const HomeProject = (props) => {
         src={props.src}
       />
       <div
-        className={`text-center w-66% ${props.i === 1 ? "mr-[4%]" : "ml-[4%]"}`}
+        className={`text-center w-66% my-auto flex-col justify-evenly ${
+          props.i === 1 ? "mr-[4%]" : "ml-[4%]"
+        }`}
       >
         <h4 className="mb-[64px] text-[36px] text-[#343F56] font-montserrat">
           {props.title}
