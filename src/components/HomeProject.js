@@ -10,11 +10,7 @@ export const HomeProject = (props) => {
         props.i === 1 && "flex flex-row-reverse"
       }`}
     >
-      <img
-        alt={props.title + " screenshot"}
-        className="h-[500px] min-w-[430px] bg-[#E9896A] w-30%"
-        src={props.src}
-      />
+      <img alt={props.title + " screenshot"} src={props.src} />
       <div
         className={`text-center w-66% my-auto flex-col justify-evenly ${
           props.i === 1 ? "mr-[4%]" : "ml-[4%]"

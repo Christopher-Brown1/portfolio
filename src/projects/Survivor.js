@@ -1,6 +1,7 @@
 import React from "react";
 import { HorizontalContent } from "../components/HorizontalContent";
 import { VerticalContent } from "../components/VerticalContent";
+import SurvivorFrameImg from "../assets/survivor/ui_frame.png";
 
 export const Survivor = (props) => {
   return (
@@ -9,7 +10,7 @@ export const Survivor = (props) => {
         title={null}
         descriptionOne="With 45 seasons worth of challenges, strategy, and backstabbing, Survivor has become a staple in homes across the world. In 2021, Survivor debuted a new era with faster gameplay and more twists and advantages thrown to the players."
         descriptionTwo="I created this Survivor companion app to help track a player’s tribe history, advantages, and to catch those hidden scenes after the episode airs. Its the perfect companion to any castaway’s viewing experience."
-        src=""
+        src={SurvivorFrameImg}
       />
       <VerticalContent
         title="Why Create a Companion App"

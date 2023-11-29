@@ -42,7 +42,7 @@ function App() {
             Christopher Brown
           </h2>
           <div>
-            <span>Email</span> <span>LinkedIn</span>
+            <span>Resume</span> <span>Email</span> <span>LinkedIn</span>
           </div>
         </div>
       </div>
