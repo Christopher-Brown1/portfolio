@@ -2,13 +2,13 @@ import React, { useEffect } from "react";
 import { VerticalContent } from "../components/VerticalContent";
 import { HorizontalContent } from "../components/HorizontalContent";
 import { SubContent } from "../components/SubContent";
-import AppleMusicFrameImg from "../assets/apple_music/ui_frame_large.png";
-import AppleMusicFrame1Img from "../assets/apple_music/ui_frame_1.png";
-import AppleMusicFrame2Img from "../assets/apple_music/ui_frame_2.png";
-import AppleMusicIconImg from "../assets/apple_music/music_icon.png";
-import AppleMusicEditMenuImg from "../assets/apple_music/music_edit_menu.png";
-import AppleMusicQueueImg from "../assets/apple_music/music_queue.png";
-import AppleMusicPlayerImg from "../assets/apple_music/music_player.png";
+// import AppleMusicFrameImg from "../assets/apple_music/ui_frame_large.png";
+// import AppleMusicFrame1Img from "../assets/apple_music/ui_frame_1.png";
+// import AppleMusicFrame2Img from "../assets/apple_music/ui_frame_2.png";
+// import AppleMusicIconImg from "../assets/apple_music/music_icon.png";
+// import AppleMusicEditMenuImg from "../assets/apple_music/music_edit_menu.png";
+// import AppleMusicQueueImg from "../assets/apple_music/music_queue.png";
+// import AppleMusicPlayerImg from "../assets/apple_music/music_player.png";
 import { Divider } from "../components/Divider";
 
 export const AppleMusic = () => {
@@ -20,28 +20,28 @@ export const AppleMusic = () => {
     <div className="flex flex-col w-full max-w-[992px] mx-auto">
       <VerticalContent
         descriptionOne="In this case study, I view one of my most used apps, Apple Music, and highlight potential features that could make the music experience even better."
-        src={AppleMusicFrameImg}
+        // src={AppleMusicFrameImg}
       />
       <Divider />
       <VerticalContent
         title="Feature #1: Pin Favorite Music"
         descriptionOne="Your favorite artist has just released the album of the year. It is all you can listen to. Flash forward to next week when new music has been released again. You find other songs that you enjoy, but you still keep going back to that album. Eventually, all of your recently added music has pushed your beloved album off of the homepage. Instantly, listening takes a few more steps and a little more time. Introducing pinned music, where you can pin favorite albums, playlists, artists, or songs directly from your library for easy access whenever you want."
-        src={AppleMusicFrame1Img}
+        // src={AppleMusicFrame1Img}
       />
       <HorizontalContent
         descriptionOne="When deciding where the pinned music should go, there were two standout options. The first option was to include a new “pinned” item at the top of the library categories. The second option was to put the pinned music below the library categories, and above the recently added section (shown here). I decided to go with the second option in order to decrease the amount of clicks needed to access them."
-        src={AppleMusicFrame2Img}
+        // src={AppleMusicFrame2Img}
       />
       <HorizontalContent
         bottom="64px"
         left="32px"
         descriptionOne="When pinning new music, I needed to find a way to differentiate between the different items that can be pinned. Using inspiration from some of the existing iconography from Apple, I created a new set of icons to represent playlists, songs, artists, albums, and genres."
-        src={AppleMusicIconImg}
+        // src={AppleMusicIconImg}
       />
       <HorizontalContent
         bottom="0"
         descriptionOne="In order to pin new music, I had to identify how a user would go about pinning new items. Using the already existing Apple Music song menu, I created a new option to “Pin ____” with the second part of the option changing depending on what type of item you are wanting to pin."
-        src={AppleMusicEditMenuImg}
+        // src={AppleMusicEditMenuImg}
       />
       <button className="text-[#387C6D] text-[19px] font-montserrat shadow-button border border-2 border-[#387C6D] rounded-[13px] px-[32px] py-[16px] mx-auto mt-[32px]">
         View Prototype
@@ -83,15 +83,15 @@ export const AppleMusic = () => {
             </li>
           </ul>
         }
-        src={AppleMusicEditMenuImg}
+        // src={AppleMusicEditMenuImg}
       />
       <HorizontalContent
         descriptionOne="Next came changes to the queue itself. This allows the queue to be set up to correspond with the new menu buttons and new queue features. The shuffle, repeat, and autoplay buttons have also been removed from the queue for easier readability."
-        src={AppleMusicQueueImg}
+        // src={AppleMusicQueueImg}
       />
       <HorizontalContent
         descriptionOne="New placement of shuffle, repeat, and autoplay buttons that is easier to reach and doesn’t cause clutter in the new queue area."
-        src={AppleMusicPlayerImg}
+        // src={AppleMusicPlayerImg}
       />
       <button className="text-[#387C6D] text-[19px] font-montserrat shadow-button border border-2 border-[#387C6D] rounded-[13px] px-[32px] py-[16px] mx-auto">
         View Prototype
