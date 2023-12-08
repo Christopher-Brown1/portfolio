@@ -1,8 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { VerticalContent } from "../components/VerticalContent";
 // import { HorizontalContent } from "../components/HorizontalContent";
 
 export const Goodreads = () => {
+  useEffect(() => {
+    document.getElementById("header").scrollIntoView();
+  }, []);
+
   return (
     <div className="flex flex-col w-full max-w-[992px] mx-auto">
       <VerticalContent

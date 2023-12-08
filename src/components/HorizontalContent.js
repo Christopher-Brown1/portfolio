@@ -1,21 +1,28 @@
 import React from "react";
 
-export const HorizontalContent = (props) => {
+export const HorizontalContent = ({
+  bottom = "64px",
+  top = "0px",
+  left = "0px",
+  reverse = false,
+  ...props
+}) => {
   return (
-    <div className="flex-col max-w-[992px] my-[64px]">
+    <div
+      className={`flex-col max-w-[992px] mt-[${top}] mb-[${bottom}] ml-[${left}]`}
+    >
       {props.title && (
         <h4 className="mb-[64px] text-[36px] text-[#343F56] text-center font-montserrat">
           {props.title}
         </h4>
       )}
-      <div className="flex">
-        <img
-          alt="survivor UI screenshot"
-          // Remove w-30% and h-[500px] after adding assets/src
-          className="h-[500px] min-w-[430px] bg-[#E9896A] w-30%"
-          src={props.src}
-        />
-        <div className="text-center w-66% my-auto flex-col justify-evenly ml-[4%]">
+      <div className={`flex ${reverse && " flex-row-reverse"}`}>
+        <img alt="survivor UI screenshot" className={``} src={props.src} />
+        <div
+          className={`text-center w-66% my-auto flex-col justify-evenly ${
+            reverse ? "mr-[4%]" : "ml-[4%]"
+          }`}
+        >
           <p className="text-[$343F56] mb-[16px] text-left">
             {props.descriptionOne}
           </p>

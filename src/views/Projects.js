@@ -8,7 +8,7 @@ export const Projects = (props) => {
 
   return (
     <div className="w-full">
-      <h1 className="text-center text-[48px] text-[#343F56] font-montserrat my-[64px]">
+      <h1 className="text-center text-[48px] text-[#343F56] font-montserrat mt-[48px] mb-[32px]">
         {project.title}
       </h1>
 

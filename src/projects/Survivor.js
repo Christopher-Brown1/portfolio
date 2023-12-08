@@ -1,9 +1,16 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { HorizontalContent } from "../components/HorizontalContent";
 import { VerticalContent } from "../components/VerticalContent";
 import SurvivorFrameImg from "../assets/survivor/ui_frame.png";
+import SurvivorAdvantageTrackerImg from "../assets/survivor/survivor_advantage_tracker.png";
+import SurvivorPlayerTribeInfoImg from "../assets/survivor/player_tribe_info.png";
+import SurvivorHomepageFlowImg from "../assets/survivor/homepage_flowchart.png";
 
-export const Survivor = (props) => {
+export const Survivor = () => {
+  useEffect(() => {
+    document.getElementById("header").scrollIntoView();
+  }, []);
+
   return (
     <div className="flex flex-col w-full max-w-[992px] mx-auto">
       <HorizontalContent
@@ -22,14 +29,15 @@ export const Survivor = (props) => {
         title="Idol and Advantage Tracker"
         descriptionOne="The first section I needed to include in my app design was for tracking advantages and idols. During this process, I was able to create some custom icons to symbolize the current season’s advantages."
         descriptionTwo="Future Plans: Allow users to click on an advantage to read the fine print including rules, when the advantage can be used, restrictions, etc."
-        src=""
+        src={SurvivorAdvantageTrackerImg}
       />
       <HorizontalContent
         title="Player Info and Tribe History"
         descriptionOne="The game moves fast in the new era of Survivor. Pre-merge comes and goes in the blink of an eye and before you know it, castaways are thrown onto the same beach with few, if any, indicators of previous tribe lines. Survivor season 45 threw another loop by reintroducing tribe swaps during the first half of the game."
         descriptionTwo="With all of the changes, the next feature that I created was tribe indicators next to each castaway’s name in order to show their tribe history. This colors correspond with the tribes’ colors from original tribes, swapped tribes, merged tribe, and a dark icon to show a player that has been voted out and didn’t participate in a tribe change."
         descriptionThree="The CBS website also includes brief biographies about the cast, a feature that carries over well to the companion app. Simply click on the profile picture of the cast mate you would like to know more about to view a quick biography."
-        src=""
+        reverse={true}
+        src={SurvivorPlayerTribeInfoImg}
       />
       <VerticalContent
         title="Merchandise"
@@ -40,7 +48,8 @@ export const Survivor = (props) => {
       <HorizontalContent
         title="To Homepage or Not to Homepage"
         descriptionOne="The original user flow included a homepage that acted as a springboard to other pages on the app. During early testing periods, I identified the homepage as being unnecessary and adding additional steps to the companion app process. It was then decided to make the current season page as the new landing page, allowing users to quickly jump into the relevant information for the current episode."
-        src=""
+        reverse={true}
+        src={SurvivorHomepageFlowImg}
       />
       <VerticalContent
         title="Design Decisions"

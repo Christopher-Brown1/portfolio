@@ -13,7 +13,10 @@ function App() {
   return (
     <div className="App bg-[#F8F5F1]">
       {/* Header */}
-      <div className="w-full border-b-[2px] border-[#343F56] pl-[80px]">
+      <div
+        className="w-full border-b-[2px] border-[#343F56] pl-[80px]"
+        id="header"
+      >
         <h1
           className="font-megrim text-[48px] font-medium pt-[48px] cursor-pointer"
           onClick={() => navigate("/")}
