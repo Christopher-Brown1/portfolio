@@ -7,6 +7,9 @@ export const HorizontalContent = ({
   reverse = false,
   ...props
 }) => {
+  const myClass = () =>
+    reverse ? "flex flex-col sm:flex-row-reverse" : "flex flex-col sm:flex-row";
+
   return (
     <div
       className={`flex-col max-w-[992px] mt-[${top}] mb-[${bottom}] ml-[${left}]`}
@@ -16,8 +19,16 @@ export const HorizontalContent = ({
           {props.title}
         </h4>
       )}
-      <div className={`flex ${reverse && " flex-row-reverse"}`}>
-        <img alt="survivor UI screenshot" className={``} src={props.src} />
+      <div className={myClass()}>
+        {Array.isArray(props.src) ? (
+          <div className="flex flex-col">
+            {props.src.map((src) => (
+              <img alt="survivor UI screenshot" className={``} src={src} />
+            ))}
+          </div>
+        ) : (
+          <img alt="survivor UI screenshot" className={``} src={props.src} />
+        )}
         <div
           className={`text-center w-66% my-auto flex-col justify-evenly ${
             reverse ? "mr-[4%]" : "ml-[4%]"

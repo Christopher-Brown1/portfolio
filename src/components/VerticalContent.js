@@ -24,13 +24,24 @@ export const VerticalContent = ({
           </p>
         )}
       </div>
-      {props.src && (
-        <img
-          alt="survivor UI screenshot"
-          className="mx-auto mt-[32px] mb-[32px]"
-          src={props.src}
-        />
-      )}
+      {props.src &&
+        (Array.isArray(props.src) ? (
+          <div className="flex">
+            {props.src.map((src) => (
+              <img
+                alt="survivor UI screenshot"
+                className="mx-auto mt-[32px] mb-[32px]"
+                src={src}
+              />
+            ))}
+          </div>
+        ) : (
+          <img
+            alt="survivor UI screenshot"
+            className="mx-auto mt-[32px] mb-[32px]"
+            src={props.src}
+          />
+        ))}
     </div>
   );
 };

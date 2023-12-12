@@ -1,10 +1,10 @@
 import React from "react";
 import HomeProject from "../components/HomeProject";
-// import FigmaLogo from "../assets/home/logos_figma.svg";
-// import GoogleLogo from "../assets/home/devicon_google.svg";
-// import UXLogo from "../assets/home/ux_research.svg";
-// import HtmlLogo from "../assets/home/html.svg";
-// import SurvivorFrameImg from "../assets/survivor/ui_frame.png";
+import FigmaLogo from "../assets/home/figma.png";
+import GoogleLogo from "../assets/home/google.png";
+import CodeLogo from "../assets/home/code.png";
+import ResearchLogo from "../assets/home/research.png";
+import SurvivorHome from "../assets/home/survivor_home.png";
 // import AppleMusicFrameImg from "../assets/apple_music/ui_frame.png";
 // import GoodreadsFrameImg from "../assets/goodreads/ui_frame.png";
 
@@ -15,7 +15,7 @@ export const PROJECTS = [
       "With 45 seasons worth of challenges, strategy, and backstabbing, Survivor has become a staple in homes across the world. In 2021, Survivor debuted a new era with faster gameplay and more twists and advantages thrown to the players.",
     descriptionTwo:
       "I created this Survivor companion app to help track a player’s tribe history, advantages, and to catch those hidden scenes after the episode airs. Its the perfect companion to any castaway’s viewing experience.",
-    // src: SurvivorFrameImg,
+    src: SurvivorHome,
   },
   {
     title: "Apple Music - New Features",
@@ -88,37 +88,25 @@ export const Home = () => {
       </div>
       <div className="flex justify-between w-full max-w-[992px] py-[16px] mt-[32px]">
         <div className="flex items-center">
-          <img
-            alt="figma logo"
-            // src={FigmaLogo}
-          />
+          <img alt="figma logo" src={FigmaLogo} />
           <h4 className="ml-[10px] font-montserrat text-[19px] text-[#387C6D]">
             Figma
           </h4>
         </div>
         <div className="flex items-center">
-          <img
-            alt="google logo"
-            // src={GoogleLogo}
-          />
+          <img alt="google logo" src={GoogleLogo} />
           <h4 className="ml-[10px] font-montserrat text-[19px] text-[#387C6D]">
             Google Workspace
           </h4>
         </div>
         <div className="flex items-center">
-          <img
-            alt="test tube icon"
-            // src={UXLogo}
-          />
+          <img alt="test tube icon" src={ResearchLogo} />
           <h4 className="ml-[10px] font-montserrat text-[19px] text-[#387C6D]">
             UX Research
           </h4>
         </div>
         <div className="flex items-center">
-          <img
-            alt="code block icon"
-            // src={HtmlLogo}
-          />
+          <img alt="code block icon" src={CodeLogo} />
           <h4 className="ml-[10px] font-montserrat text-[19px] text-[#387C6D]">
             Basic HTML, CSS, and JS
           </h4>
