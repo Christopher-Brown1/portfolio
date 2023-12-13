@@ -3,10 +3,11 @@ import React from "react";
 export const VerticalContent = ({
   bottom = true,
   textSize = "small",
+  textWidth = "max-w-1024px",
   ...props
 }) => {
   return (
-    <div className={`flex-col max-w-[992px] ${bottom && "mb-[64px]"}]`}>
+    <div className={"w-full max-w-[1024px] mx-auto" + bottom && "mb-[64px]"}>
       {props.title && (
         <h4
           className={`mb-[32px] ${
@@ -16,8 +17,10 @@ export const VerticalContent = ({
           {props.title}
         </h4>
       )}
-      <div className="text-center w-66% my-auto flex-col justify-evenly">
-        <p className="text-[#343F56] text-left">{props.descriptionOne}</p>
+      <div className="text-center w-66% my-auto flex-col justify-evenly mb-[64px]">
+        <p className={`text-[#343F56] ${textWidth} mx-auto text-left`}>
+          {props.descriptionOne}
+        </p>
         {props.descriptionTwo && (
           <p className="text-[#343F56] text-left mt-[16px]">
             {props.descriptionTwo}
@@ -26,11 +29,13 @@ export const VerticalContent = ({
       </div>
       {props.src &&
         (Array.isArray(props.src) ? (
-          <div className="flex">
-            {props.src.map((src) => (
+          <div className="flex justify-center">
+            {props.src.map((src, i) => (
               <img
                 alt="survivor UI screenshot"
-                className="mx-auto mt-[32px] mb-[32px]"
+                className={`object-none mb-[32px] ${
+                  i !== props.src.length - 1 && "mr-[64px]"
+                }`}
                 src={src}
               />
             ))}
@@ -38,7 +43,7 @@ export const VerticalContent = ({
         ) : (
           <img
             alt="survivor UI screenshot"
-            className="mx-auto mt-[32px] mb-[32px]"
+            className="object-none"
             src={props.src}
           />
         ))}

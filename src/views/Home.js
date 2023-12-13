@@ -5,8 +5,8 @@ import GoogleLogo from "../assets/home/google.png";
 import CodeLogo from "../assets/home/code.png";
 import ResearchLogo from "../assets/home/research.png";
 import SurvivorHome from "../assets/home/survivor_home.png";
-// import AppleMusicFrameImg from "../assets/apple_music/ui_frame.png";
-// import GoodreadsFrameImg from "../assets/goodreads/ui_frame.png";
+import MusicNav from "../assets/shared/music_nav.png";
+import GoodreadNav from "../assets/shared/goodreads_nav.png";
 
 export const PROJECTS = [
   {
@@ -15,7 +15,13 @@ export const PROJECTS = [
       "With 45 seasons worth of challenges, strategy, and backstabbing, Survivor has become a staple in homes across the world. In 2021, Survivor debuted a new era with faster gameplay and more twists and advantages thrown to the players.",
     descriptionTwo:
       "I created this Survivor companion app to help track a player’s tribe history, advantages, and to catch those hidden scenes after the episode airs. Its the perfect companion to any castaway’s viewing experience.",
-    src: SurvivorHome,
+    src: (
+      <img
+        alt="Survivor Companion App Screenshot"
+        className="h-[500px] w-[430px]"
+        src={SurvivorHome}
+      />
+    ),
   },
   {
     title: "Apple Music - New Features",
@@ -23,19 +29,31 @@ export const PROJECTS = [
       "Apple Music is a music streaming service. From user interviews, competitor analysis, and prototype user tests, I decided to put the app through the research process.",
     descriptionTwo:
       "In this case study, I view one of my most used apps, Apple Music, and highlight potential features that could make the music experience even better.",
-    // src: AppleMusicFrameImg,
+    src: (
+      <img
+        alt="Apple Music Screenshot"
+        className="h-[500px] w-[386px]"
+        src={MusicNav}
+      />
+    ),
   },
   {
     title: "Goodreads Website Redesign",
     descriptionOne:
       "With a group of fellow bootcamp students, we identified a website that we use and would like to update. My group chose the beloved Goodreads website. With an impressive app, but a poor website, we conducted research and tests to identify what was wrong with the current site, and then created a prototype website based on our design.",
-    // src: GoodreadsFrameImg,
+    src: (
+      <img
+        alt="Goodreads Website Screenshot"
+        className="h-[500px] w-[600px]"
+        src={GoodreadNav}
+      />
+    ),
   },
 ];
 
 export const Home = () => {
   return (
-    <div className="w-full flex flex-col items-center pb-[64px]">
+    <div className="w-full flex flex-col items-center">
       <div className="w-full h-[75px] bg-[#E9896A]" />
       <div className="w-full h-[75px] bg-[#387C6D] shadow-home flex items-center justify-end">
         <h2 className="text-[#F8F5F1] text-[36px] mr-[80px]">
@@ -48,16 +66,16 @@ export const Home = () => {
         </h2>
       </div>
 
-      <h3 className="text-center text-[48px] text-[#343F56] font-montserrat mb-[20px] mt-[64px]">
+      <h3 className="text-center text-[48px] text-[#343F56] font-montserrat mb-[64px] my-[32px]">
         About Me
       </h3>
-      <p className="text-[18px] text-[#343F56] font-trirong max-w-[992px] mx-auto">
+      <p className="text-[18px] text-[#343F56] font-trirong max-w-[1024px] mx-auto">
         Before I became a UI/UX designer, I taught elementary school. During
         this time I was able to develop strong presentation, organization, and
         adaptability skills. I also have experience working in a professional
         writing environment as a contracted writer.
       </p>
-      <p className="text-[18px] text-[#343F56] font-trirong max-w-[992px] mx-auto mt-[18px] mb-[32px]">
+      <p className="text-[18px] text-[#343F56] font-trirong max-w-[1024px] mx-auto mt-[18px] mb-[64px]">
         I have a strong moral drive to understand people. I have worked hard to
         develop empathy for others. Now, it is my turn to help find solutions
         for life’s tech problems, and make it look good in the process!
@@ -86,7 +104,7 @@ export const Home = () => {
           Email
         </a>
       </div>
-      <div className="flex justify-between w-full max-w-[992px] py-[16px] mt-[32px]">
+      <div className="flex justify-between w-full max-w-[1024px] py-[16px] mt-[64px]">
         <div className="flex items-center">
           <img alt="figma logo" src={FigmaLogo} />
           <h4 className="ml-[10px] font-montserrat text-[19px] text-[#387C6D]">

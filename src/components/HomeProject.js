@@ -6,13 +6,13 @@ export const HomeProject = (props) => {
 
   return (
     <div
-      className={`flex max-w-[992px] my-[64px] ${
+      className={`flex max-w-[1024px] my-[64px] ${
         props.i === 1 && "flex flex-row-reverse"
       }`}
     >
-      <img alt={props.title + " screenshot"} src={props.src} />
+      {props.src}
       <div
-        className={`text-center w-66% my-auto flex-col justify-evenly ${
+        className={`text-center my-auto flex-col justify-evenly ${
           props.i === 1 ? "mr-[4%]" : "ml-[4%]"
         }`}
       >

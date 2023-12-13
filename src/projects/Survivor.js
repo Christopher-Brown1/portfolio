@@ -18,6 +18,7 @@ import Survivor14 from "../assets/survivor/survivor_14.png";
 import Survivor15 from "../assets/survivor/survivor_15.png";
 import Survivor16 from "../assets/survivor/survivor_16.png";
 import VSIcon from "../assets/survivor/vs.png";
+import ArrowIcon from "../assets/survivor/arrow.png";
 
 export const Survivor = () => {
   useEffect(() => {
@@ -25,7 +26,7 @@ export const Survivor = () => {
   }, []);
 
   return (
-    <div className="flex flex-col w-full max-w-[992px] mx-auto">
+    <div className="flex flex-col w-full max-w-[1024px] mx-auto">
       <HorizontalContent
         title={null}
         descriptionOne="With 45 seasons worth of challenges, strategy, and backstabbing, Survivor has become a staple in homes across the world. In 2021, Survivor debuted a new era with faster gameplay and more twists and advantages thrown to the players."
@@ -37,6 +38,7 @@ export const Survivor = () => {
         descriptionOne="With the new era of Survivor bringing additional advantages, disadvantages, tribe swaps, hidden idols, and even idols displayed out in the open, I was constantly asking myself: “Who has what?” I read online over and over again about viewers getting confused, discouraged, and giving up on the show with these new twists. In an effort to make the show more viewer friendly, a companion app would allow viewers to better follow along with the castaways’ strategizing."
         descriptionTwo={null}
         src={Survivor2}
+        textWidth="max-w-[750px]"
       />
       <HorizontalContent
         title="Idol and Advantage Tracker"
@@ -73,11 +75,13 @@ export const Survivor = () => {
       <VerticalContent
         title="Iterations"
         descriptionOne="Various iterations were made based on user feedback to improve how the app looked and was used. These iterations focused on readability, industry standards, and accessibility."
-        src={[Survivor11, Survivor12]}
+        src={[Survivor11, ArrowIcon, Survivor12]}
+        textWidth="max-w-[600px]"
       />
       <VerticalContent
         descriptionOne="Various iterations were made based on user feedback to improve how the app looked and was used. These iterations focused on readability, industry standards, and accessibility."
-        src={[Survivor13, Survivor14]}
+        src={[Survivor13, ArrowIcon, Survivor14]}
+        textWidth="max-w-[600px]"
       />
       <VerticalContent
         title="A/B Testing"

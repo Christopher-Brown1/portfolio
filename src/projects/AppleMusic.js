@@ -17,7 +17,7 @@ export const AppleMusic = () => {
   }, []);
 
   return (
-    <div className="flex flex-col w-full max-w-[992px] mx-auto">
+    <div className="flex flex-col w-full max-w-[1024px] mx-auto">
       <VerticalContent
         descriptionOne="In this case study, I view one of my most used apps, Apple Music, and highlight potential features that could make the music experience even better."
         // src={AppleMusicFrameImg}

@@ -12,7 +12,7 @@ export const HorizontalContent = ({
 
   return (
     <div
-      className={`flex-col max-w-[992px] mt-[${top}] mb-[${bottom}] ml-[${left}]`}
+      className={`flex-col max-w-[1024px] mt-[${top}] mb-[${bottom}] ml-[${left}]`}
     >
       {props.title && (
         <h4 className="mb-[64px] text-[36px] text-[#343F56] text-center font-montserrat">
@@ -22,12 +22,22 @@ export const HorizontalContent = ({
       <div className={myClass()}>
         {Array.isArray(props.src) ? (
           <div className="flex flex-col">
-            {props.src.map((src) => (
-              <img alt="survivor UI screenshot" className={``} src={src} />
+            {props.src.map((src, i) => (
+              <img
+                alt="survivor UI screenshot"
+                className={`max-w-[initial] ${
+                  i !== props.src.length - 1 && "mb-[32px]"
+                }`}
+                src={src}
+              />
             ))}
           </div>
         ) : (
-          <img alt="survivor UI screenshot" className={``} src={props.src} />
+          <img
+            alt="survivor UI screenshot"
+            className="max-w-[initial]"
+            src={props.src}
+          />
         )}
         <div
           className={`text-center w-66% my-auto flex-col justify-evenly ${

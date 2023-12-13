@@ -15,3 +15,16 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+p {
+  color: #343f56;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 21.6px; /* 120% */
+  font-family: Trirong;
+}
+
+@font-face {
+  font-family: Trirong;
+  src: url("https://fonts.googleapis.com/css2?family=Megrim&family=Montserrat&family=Trirong:wght@500&display=swap");
+}
