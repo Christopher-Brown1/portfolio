@@ -6,8 +6,14 @@ export const VerticalContent = ({
   textWidth = "max-w-1024px",
   ...props
 }) => {
+  let customClass = "w-full max-w-[1024px] mx-auto";
+
+  if (bottom) {
+    customClass = customClass + " mb-[64px]";
+  }
+
   return (
-    <div className={"w-full max-w-[1024px] mx-auto" + bottom && "mb-[64px]"}>
+    <div className={customClass}>
       {props.title && (
         <h4
           className={`mb-[32px] ${
@@ -36,6 +42,7 @@ export const VerticalContent = ({
                 className={`object-none mb-[32px] ${
                   i !== props.src.length - 1 && "mr-[64px]"
                 }`}
+                key={i}
                 src={src}
               />
             ))}

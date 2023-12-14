@@ -1,10 +1,23 @@
 import React from "react";
 import { Outlet, useLocation } from "react-router-dom";
 import { PROJECTS } from "./Home";
+import MusicNav from "../assets/shared/music_nav.png";
+import GoodreadNav from "../assets/shared/goodreads_nav.png";
+import SurvivorHome from "../assets/home/survivor_home.png";
 
 export const Projects = (props) => {
   const location = useLocation();
   const currentProject = PROJECTS[location.pathname.split("").pop() - 1];
+
+  const getImage = (project) => {
+    if (project.title === "Apple Music - New Features") {
+      return MusicNav;
+    } else if (project.title === "Goodreads Website Redesign") {
+      return GoodreadNav;
+    } else if (project.title === "Survivor Companion App") {
+      return SurvivorHome;
+    }
+  };
 
   return (
     <div className="w-full">
@@ -18,11 +31,27 @@ export const Projects = (props) => {
       <h3 className="text-center text-[36px] text-[#343F56] font-montserrat py-[32px] mt-[64px] w-full border-t-[10px] border-[#E9896A]">
         Other Projects
       </h3>
-      <div className="flex justify-center">
+      <div className="flex justify-center min-w-max">
         {PROJECTS.filter(
           (project) => project.title !== currentProject.title
-        ).map((project) => (
-          <h4>{project.title}</h4>
+        ).map((project, i) => (
+          <div
+            className={`${
+              i !== PROJECTS.length - 2
+                ? "flex flex-col mr-[64px]"
+                : "flex flex-col"
+            }`}
+            key={i}
+          >
+            <img
+              alt={project.title}
+              className="min-w-[initial]"
+              src={getImage(project)}
+            />
+            <h4 className="text-center text-[36px] text-[#343F56] font-[400] font-Montserrat">
+              {project.title}
+            </h4>
+          </div>
         ))}
       </div>
     </div>

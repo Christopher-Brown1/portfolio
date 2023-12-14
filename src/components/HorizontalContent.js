@@ -28,6 +28,7 @@ export const HorizontalContent = ({
                 className={`max-w-[initial] ${
                   i !== props.src.length - 1 && "mb-[32px]"
                 }`}
+                key={i}
                 src={src}
               />
             ))}

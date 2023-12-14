@@ -89,6 +89,7 @@ export const Survivor = () => {
         src={[Survivor15, VSIcon, Survivor16]}
       />
       <VerticalContent
+        bottom={false}
         title="Next Steps"
         descriptionOne="Here is where I talk about potential next steps in the app."
       />
