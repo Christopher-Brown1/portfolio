@@ -1,11 +1,12 @@
 import React from "react";
-import { Outlet, useLocation } from "react-router-dom";
+import { Outlet, useLocation, useNavigate } from "react-router-dom";
 import { PROJECTS } from "./Home";
 import MusicNav from "../assets/shared/music_nav.png";
 import GoodreadNav from "../assets/shared/goodreads_nav.png";
 import SurvivorHome from "../assets/home/survivor_home.png";
 
 export const Projects = (props) => {
+  const navigate = useNavigate();
   const location = useLocation();
   const currentProject = PROJECTS[location.pathname.split("").pop() - 1];
 
@@ -28,24 +29,34 @@ export const Projects = (props) => {
       {/* This is controlled on App.js sub routes */}
       <Outlet />
 
-      <h3 className="text-center text-[36px] text-[#343F56] font-montserrat py-[32px] mt-[64px] w-full border-t-[10px] border-[#E9896A]">
+      <h3 className="text-center text-[36px] text-[#343F56] font-montserrat py-[48px] mt-[64px] w-full border-t-[10px] border-[#E9896A]">
         Other Projects
       </h3>
-      <div className="flex justify-center min-w-max">
+      <div className="flex justify-center">
         {PROJECTS.filter(
           (project) => project.title !== currentProject.title
         ).map((project, i) => (
           <div
-            className={`${
+            className={
               i !== PROJECTS.length - 2
-                ? "flex flex-col mr-[64px]"
-                : "flex flex-col"
-            }`}
+                ? "flex flex-col w-[25%] cursor-pointer mr-[64px]"
+                : "flex flex-col w-[25%] cursor-pointer"
+            }
             key={i}
+            onClick={() =>
+              navigate(
+                `${
+                  PROJECTS.map((project) => project.title).indexOf(
+                    project.title
+                  ) + 1
+                }`
+              )
+            }
           >
             <img
               alt={project.title}
-              className="min-w-[initial]"
+              className="object-contain"
+              style={{ height: 300, aspectRatio: "3/2" }}
               src={getImage(project)}
             />
             <h4 className="text-center text-[36px] text-[#343F56] font-[400] font-Montserrat">

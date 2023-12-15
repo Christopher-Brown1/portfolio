@@ -40,7 +40,7 @@ export const VerticalContent = ({
               <img
                 alt="survivor UI screenshot"
                 className={`object-none mb-[32px] ${
-                  i !== props.src.length - 1 && "mr-[64px]"
+                  i !== props.src.length - 1 ? "mr-[64px]" : ""
                 }`}
                 key={i}
                 src={src}
@@ -50,7 +50,7 @@ export const VerticalContent = ({
         ) : (
           <img
             alt="survivor UI screenshot"
-            className="object-none"
+            className="object-none mx-auto"
             src={props.src}
           />
         ))}
