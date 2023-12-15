@@ -3,6 +3,9 @@ import { Routes, Route, useNavigate } from "react-router-dom";
 
 import { Home } from "./views/Home";
 import { Projects } from "./views/Projects";
+import ResumeFooter from "./assets/shared/Resume_footer.png";
+import EmailFooter from "./assets/shared/Email_footer.png";
+import LinkedInFooter from "./assets/shared/Linkedin_footer.png";
 const Survivor = lazy(() => import("./projects/Survivor"));
 const AppleMusic = lazy(() => import("./projects/AppleMusic"));
 const Goodreads = lazy(() => import("./projects/Goodreads"));
@@ -40,12 +43,34 @@ function App() {
 
       {/* Footer */}
       <div className="w-full bg-[#343F56] text-[#F8F5F1]">
-        <div className="flex flex-col text-right mr-[80px] mt-[64px] py-[16px]">
-          <h2 className="font-megrim text-[32px] font-medium">
-            Christopher Brown
-          </h2>
+        <div className="flex justify-between items-center py-[16px] px-[80px]">
           <div>
-            <span>Resume</span> <span>Email</span> <span>LinkedIn</span>
+            <h2 className="font-megrim text-[32px] leading-[38.4px] font-medium border-b border-[#387C6D] p-0">
+              Christopher Brown
+            </h2>
+            <p className="text-[#E9896A] text-[8px] font-[500] leading-[10px] font-trirong">
+              Barely Fiction Experiences
+            </p>
+          </div>
+          <div className="flex justify-end">
+            <div className="flex flex-col items-center mr-[16.5px]">
+              <img alt="" className="h-[30px] w-[30px]" src={ResumeFooter} />
+              <p className="text-[#F8F5F1] text-[10px] font-[500] font-trirong">
+                Resume
+              </p>
+            </div>
+            <div className="flex flex-col items-center mr-[16.5px]">
+              <img alt="" className="h-[30px] w-[30px]" src={EmailFooter} />
+              <p className="text-[#F8F5F1] text-[10px] font-[500] font-trirong">
+                Email
+              </p>
+            </div>
+            <div className="flex flex-col items-center mr-[16.5px]">
+              <img alt="" className="h-[30px] w-[30px]" src={LinkedInFooter} />
+              <p className="text-[#F8F5F1] text-[10px] font-[500] font-Trirong">
+                LinkedIn
+              </p>
+            </div>
           </div>
         </div>
       </div>

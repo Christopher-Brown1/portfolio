@@ -53,7 +53,7 @@ export const PROJECTS = [
 
 export const Home = () => {
   return (
-    <div className="w-full flex flex-col items-center">
+    <div className="w-full flex flex-col items-center mb-[16px]">
       <div className="w-full h-[75px] bg-[#E9896A]" />
       <div className="w-full h-[75px] bg-[#387C6D] shadow-home flex items-center justify-end">
         <h2 className="text-[#F8F5F1] text-[36px] mr-[80px]">
