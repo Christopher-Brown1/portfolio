@@ -3,9 +3,9 @@ import { Routes, Route, useNavigate } from "react-router-dom";
 
 import { Home } from "./views/Home";
 import { Projects } from "./views/Projects";
-// import ResumeFooter from "./assets/shared/Resume_footer.png";
-// import EmailFooter from "./assets/shared/Email_footer.png";
-// import LinkedInFooter from "./assets/shared/Linkedin_footer.png";
+import ResumeFooter from "./assets/shared/Resume_footer.png";
+import EmailFooter from "./assets/shared/Email_footer.png";
+import LinkedInFooter from "./assets/shared/Linkedin_footer.png";
 const Survivor = lazy(() => import("./projects/Survivor"));
 const AppleMusic = lazy(() => import("./projects/AppleMusic"));
 const Goodreads = lazy(() => import("./projects/Goodreads"));
@@ -54,19 +54,19 @@ function App() {
           </div>
           <div className="flex justify-end">
             <div className="flex flex-col items-center mr-[16.5px]">
-              {/* <img alt="" className="h-[30px] w-[30px]" src={ResumeFooter} /> */}
+              <img alt="" className="h-[30px] w-[30px]" src={ResumeFooter} />
               <p className="text-[#F8F5F1] text-[10px] font-[500] font-trirong">
                 Resume
               </p>
             </div>
             <div className="flex flex-col items-center mr-[16.5px]">
-              {/* <img alt="" className="h-[30px] w-[30px]" src={EmailFooter} /> */}
+              <img alt="" className="h-[30px] w-[30px]" src={EmailFooter} />
               <p className="text-[#F8F5F1] text-[10px] font-[500] font-trirong">
                 Email
               </p>
             </div>
             <div className="flex flex-col items-center mr-[16.5px]">
-              {/* <img alt="" className="h-[30px] w-[30px]" src={LinkedInFooter} /> */}
+              <img alt="" className="h-[30px] w-[30px]" src={LinkedInFooter} />
               <p className="text-[#F8F5F1] text-[10px] font-[500] font-Trirong">
                 LinkedIn
               </p>
