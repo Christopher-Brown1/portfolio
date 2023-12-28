@@ -6,7 +6,7 @@ export const HomeProject = (props) => {
 
   return (
     <div
-      className={`flex max-w-[1024px] my-[64px] ${
+      className={`flex max-w-[1200px] my-[64px] ${
         props.i === 1 && "flex flex-row-reverse"
       }`}
     >

@@ -26,7 +26,7 @@ export const Survivor = () => {
   }, []);
 
   return (
-    <div className="flex flex-col w-full max-w-[1024px] mx-auto">
+    <div className="flex flex-col w-full max-w-[1200px] mx-auto">
       <HorizontalContent
         title={null}
         descriptionOne="With 45 seasons worth of challenges, strategy, and backstabbing, Survivor has become a staple in homes across the world. In 2021, Survivor debuted a new era with faster gameplay and more twists and advantages thrown to the players."

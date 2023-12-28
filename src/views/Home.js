@@ -69,13 +69,13 @@ export const Home = () => {
       <h3 className="text-center text-[48px] text-[#343F56] font-montserrat mb-[64px] my-[32px]">
         About Me
       </h3>
-      <p className="text-[18px] text-[#343F56] font-trirong max-w-[1024px] mx-auto">
+      <p className="text-[18px] text-[#343F56] font-trirong max-w-[1200px] mx-auto">
         Before I became a UI/UX designer, I taught elementary school. During
         this time I was able to develop strong presentation, organization, and
         adaptability skills. I also have experience working in a professional
         writing environment as a contracted writer.
       </p>
-      <p className="text-[18px] text-[#343F56] font-trirong max-w-[1024px] mx-auto mt-[18px] mb-[64px]">
+      <p className="text-[18px] text-[#343F56] font-trirong max-w-[1200px] mx-auto mt-[18px] mb-[64px]">
         I have a strong moral drive to understand people. I have worked hard to
         develop empathy for others. Now, it is my turn to help find solutions
         for life’s tech problems, and make it look good in the process!
@@ -104,7 +104,7 @@ export const Home = () => {
           Email
         </a>
       </div>
-      <div className="flex justify-between w-full max-w-[1024px] py-[16px] mt-[64px]">
+      <div className="flex justify-between w-full max-w-[1200px] py-[16px] mt-[64px]">
         <div className="flex items-center">
           <img alt="figma logo" src={FigmaLogo} />
           <h4 className="ml-[10px] font-montserrat text-[19px] text-[#387C6D]">

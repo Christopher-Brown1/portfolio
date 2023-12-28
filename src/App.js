@@ -29,17 +29,20 @@ function App() {
       </div>
 
       {/* Content */}
-      <Suspense fallback={<div className="container">Loading...</div>}>
-        <Routes>
-          <Route exact path="/" element={<Home />} />
-          <Route exact path="/project" element={<Projects />}>
-            <Route exact path="/project/1" element={<Survivor />} />
-            <Route exact path="/project/2" element={<AppleMusic />} />
-            <Route exact path="/project/3" element={<Goodreads />} />
-          </Route>
-          <Route path="*" element={<Home />} />
-        </Routes>
-      </Suspense>
+      <div className="relative">
+        <Suspense fallback={<div className="container">Loading...</div>}>
+          <Routes>
+            <Route exact path="/" element={<Home />} />
+            <Route exact path="/project" element={<Projects />}>
+              <Route exact path="/project/1" element={<Survivor />} />
+              <Route exact path="/project/2" element={<AppleMusic />} />
+              <Route exact path="/project/3" element={<Goodreads />} />
+            </Route>
+            <Route path="*" element={<Home />} />
+          </Routes>
+        </Suspense>
+        <div className="absolute">Scroll to top</div>
+      </div>
 
       {/* Footer */}
       <div className="w-full bg-[#343F56] text-[#F8F5F1]">
