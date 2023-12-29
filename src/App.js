@@ -6,6 +6,7 @@ import { Projects } from "./views/Projects";
 import ResumeFooter from "./assets/shared/Resume_footer.png";
 import EmailFooter from "./assets/shared/Email_footer.png";
 import LinkedInFooter from "./assets/shared/Linkedin_footer.png";
+import { ReactComponent as ScrollToTop } from "./assets/shared/Scroll_to_top.svg";
 const Survivor = lazy(() => import("./projects/Survivor"));
 const AppleMusic = lazy(() => import("./projects/AppleMusic"));
 const Goodreads = lazy(() => import("./projects/Goodreads"));
@@ -41,7 +42,7 @@ function App() {
             <Route path="*" element={<Home />} />
           </Routes>
         </Suspense>
-        <div className="absolute">Scroll to top</div>
+        <ScrollToTop className="sticky bottom-[24px] right-[24px] ml-auto mb-[24px] h-[50px] w-[50px]" />
       </div>
 
       {/* Footer */}
