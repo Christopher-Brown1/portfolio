@@ -1,4 +1,4 @@
-import { lazy, Suspense } from "react";
+import { lazy, Suspense, useRef } from "react";
 import { Routes, Route, useNavigate } from "react-router-dom";
 
 import { Home } from "./views/Home";
@@ -12,6 +12,7 @@ const AppleMusic = lazy(() => import("./projects/AppleMusic"));
 const Goodreads = lazy(() => import("./projects/Goodreads"));
 
 function App() {
+  const headerRef = useRef(null);
   const navigate = useNavigate();
 
   return (
@@ -20,6 +21,7 @@ function App() {
       <div
         className="w-full border-b-[2px] border-[#343F56] pl-[80px]"
         id="header"
+        ref={headerRef}
       >
         <h1
           className="font-megrim text-[48px] font-medium pt-[48px] cursor-pointer"
@@ -42,12 +44,15 @@ function App() {
             <Route path="*" element={<Home />} />
           </Routes>
         </Suspense>
-        <ScrollToTop className="sticky bottom-[24px] right-[24px] ml-auto mb-[24px] h-[50px] w-[50px]" />
+        <ScrollToTop
+          className="cursor-pointer sticky bottom-[24px] right-[24px] ml-auto mb-[24px] h-[75px] w-[75px]"
+          onClick={() => headerRef.current.scrollIntoView()}
+        />
       </div>
 
       {/* Footer */}
       <div className="w-full bg-[#343F56] text-[#F8F5F1]">
-        <div className="flex justify-between items-center py-[16px] px-[80px]">
+        <div className="flex justify-between items-center pb-[16px] pt-[20px] px-[80px]">
           <div>
             <h2 className="font-megrim text-[32px] leading-[38.4px] font-medium border-b border-[#387C6D] p-0">
               Christopher Brown
@@ -57,24 +62,33 @@ function App() {
             </p>
           </div>
           <div className="flex justify-end">
-            <div className="flex flex-col items-center mr-[16.5px]">
+            <a
+              className="flex flex-col items-center mr-[16.5px]"
+              href={`${process.env.PUBLIC_URL}/christopher_resume.pdf`}
+            >
               <img alt="" className="h-[30px] w-[30px]" src={ResumeFooter} />
               <p className="text-[#F8F5F1] text-[10px] font-[500] font-trirong">
                 Resume
               </p>
-            </div>
-            <div className="flex flex-col items-center mr-[16.5px]">
+            </a>
+            <a
+              className="flex flex-col items-center mr-[16.5px]"
+              href="mailto: chrisbrownuiux@gmail.com"
+            >
               <img alt="" className="h-[30px] w-[30px]" src={EmailFooter} />
               <p className="text-[#F8F5F1] text-[10px] font-[500] font-trirong">
                 Email
               </p>
-            </div>
-            <div className="flex flex-col items-center mr-[16.5px]">
+            </a>
+            <a
+              className="flex flex-col items-center mr-[16.5px]"
+              href="https://www.linkedin.com/in/chrisbrownuiux/"
+            >
               <img alt="" className="h-[30px] w-[30px]" src={LinkedInFooter} />
               <p className="text-[#F8F5F1] text-[10px] font-[500] font-Trirong">
                 LinkedIn
               </p>
-            </div>
+            </a>
           </div>
         </div>
       </div>
