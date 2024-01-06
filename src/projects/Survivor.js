@@ -1,8 +1,16 @@
 import React, { useEffect } from "react";
+import ImageGallery from "react-image-gallery";
+
 import { HorizontalContent } from "../components/HorizontalContent";
 import { VerticalContent } from "../components/VerticalContent";
 import Survivor1 from "../assets/survivor/survivor_1.png";
-import Survivor2 from "../assets/survivor/survivor_2.png";
+import Journey1 from "../assets/survivor/journey1.svg";
+import Journey2 from "../assets/survivor/journey2.svg";
+import Journey3 from "../assets/survivor/journey3.svg";
+import Journey4 from "../assets/survivor/journey4.svg";
+import Journey5 from "../assets/survivor/journey5.svg";
+import Journey6 from "../assets/survivor/journey6.svg";
+import Journey7 from "../assets/survivor/journey7.svg";
 import Survivor3 from "../assets/survivor/survivor_3.png";
 import Survivor4 from "../assets/survivor/survivor_4.png";
 import Survivor5 from "../assets/survivor/survivor_5.png";
@@ -19,6 +27,16 @@ import Survivor15 from "../assets/survivor/survivor_15.png";
 import Survivor16 from "../assets/survivor/survivor_16.png";
 import VSIcon from "../assets/survivor/vs.png";
 import ArrowIcon from "../assets/survivor/arrow.png";
+
+const images = [
+  { original: Journey1 },
+  { original: Journey2 },
+  { original: Journey3 },
+  { original: Journey4 },
+  { original: Journey5 },
+  { original: Journey6 },
+  { original: Journey7 },
+];
 
 export const Survivor = () => {
   useEffect(() => {
@@ -37,7 +55,21 @@ export const Survivor = () => {
         title="Why Create a Companion App"
         descriptionOne="With the new era of Survivor bringing additional advantages, disadvantages, tribe swaps, hidden idols, and even idols displayed out in the open, I was constantly asking myself: “Who has what?” I read online over and over again about viewers getting confused, discouraged, and giving up on the show with these new twists. In an effort to make the show more viewer friendly, a companion app would allow viewers to better follow along with the castaways’ strategizing."
         descriptionTwo={null}
-        src={Survivor2}
+        // src={Survivor2}
+        customImage={
+          <ImageGallery
+            infinite={false}
+            items={images}
+            renderLeftNav={(onClick, disabled) => (
+              <LeftNav onClick={onClick} disabled={disabled} />
+            )}
+            renderRightNav={(onClick, disabled) => (
+              <RightNav onClick={onClick} disabled={disabled} />
+            )}
+            showFullscreenButton={false}
+            showPlayButton={false}
+          />
+        }
         textWidth="max-w-[750px]"
       />
       <HorizontalContent
@@ -85,13 +117,32 @@ export const Survivor = () => {
       />
       <VerticalContent
         title="A/B Testing"
-        descriptionOne="Here I can describe the testing that was done and what the results were"
+        descriptionOne="During the iteration process, a user made a comment about how the section containers looked throughout the app. I then conducted an A/B test in order to identify which style was preferred by users. The results indicated that users liked how the colorful containers played into the colorful theme of survivor, but they liked how clean the dark version looked. While this helped me decide on the color version, it prompted me to add a colorful, but clean, container update to my future iterations list."
         src={[Survivor15, VSIcon, Survivor16]}
       />
       <VerticalContent
         bottom={false}
         title="Next Steps"
-        descriptionOne="Here is where I talk about potential next steps in the app."
+        descriptionOne={
+          <React.Fragment>
+            <p>
+              In addition to the container update, future iterations could
+              include:
+            </p>
+            <ul className="list-decimal">
+              <li className="list-item ml-[40px]">
+                Connection to Bracketology, the official Survivor fantasy
+                league.
+              </li>
+              <li className="list-item ml-[40px]">
+                Social features to discuss the episode and CBS provided clips.
+              </li>
+              <li className="list-item ml-[40px]">
+                Integrated casting profile management.
+              </li>
+            </ul>
+          </React.Fragment>
+        }
       />
       <button className="text-[#387C6D] text-[19px] font-montserrat shadow-button border border-2 border-[#387C6D] rounded-[13px] px-[32px] py-[16px] mx-auto">
         View Prototype
@@ -101,3 +152,30 @@ export const Survivor = () => {
 };
 
 export default Survivor;
+
+const LeftNav = React.memo(({ disabled, onClick }) => {
+  return (
+    <button
+      type="button"
+      className="image-gallery-icon image-gallery-left-nav"
+      disabled={disabled}
+      onClick={onClick}
+      aria-label="Previous Slide"
+    >
+      Back
+    </button>
+  );
+});
+const RightNav = React.memo(({ disabled, onClick }) => {
+  return (
+    <button
+      type="button"
+      className="image-gallery-icon image-gallery-right-nav"
+      disabled={disabled}
+      onClick={onClick}
+      aria-label="Next Slide"
+    >
+      Next
+    </button>
+  );
+});

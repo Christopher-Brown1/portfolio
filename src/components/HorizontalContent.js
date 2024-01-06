@@ -3,7 +3,6 @@ import React from "react";
 export const HorizontalContent = ({
   bottom = "64px",
   top = "0px",
-  left = "0px",
   reverse = false,
   ...props
 }) => {
@@ -12,7 +11,7 @@ export const HorizontalContent = ({
 
   return (
     <div
-      className={`flex-col max-w-[1024px] mt-[${top}] mb-[${bottom}] ml-[${left}]`}
+      className={`flex-col max-w-[1024px] mt-[${top}] mb-[${bottom}] mx-[auto]`}
     >
       {props.title && (
         <h4 className="mb-[64px] text-[36px] text-[#343F56] text-center font-montserrat">

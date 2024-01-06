@@ -22,7 +22,7 @@ export const Projects = (props) => {
 
   return (
     <div className="w-full">
-      <h1 className="text-center text-[48px] text-[#343F56] font-montserrat mt-[64px] mb-[64px]">
+      <h1 className="text-center text-[48px] text-[#343F56] font-montserrat mt-[48px] mb-[32px]">
         {currentProject.title}
       </h1>
 

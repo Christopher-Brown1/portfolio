@@ -1,4 +1,4 @@
-import { lazy, Suspense, useRef } from "react";
+import { useRef } from "react";
 import { Routes, Route, useNavigate } from "react-router-dom";
 
 import { Home } from "./views/Home";
@@ -7,9 +7,9 @@ import ResumeFooter from "./assets/shared/Resume_footer.png";
 import EmailFooter from "./assets/shared/Email_footer.png";
 import LinkedInFooter from "./assets/shared/Linkedin_footer.png";
 import { ReactComponent as ScrollToTop } from "./assets/shared/Scroll_to_top.svg";
-const Survivor = lazy(() => import("./projects/Survivor"));
-const AppleMusic = lazy(() => import("./projects/AppleMusic"));
-const Goodreads = lazy(() => import("./projects/Goodreads"));
+import Survivor from "./projects/Survivor";
+import AppleMusic from "./projects/AppleMusic";
+import Goodreads from "./projects/Goodreads";
 
 function App() {
   const headerRef = useRef(null);
@@ -33,17 +33,15 @@ function App() {
 
       {/* Content */}
       <div className="relative">
-        <Suspense fallback={<div className="container">Loading...</div>}>
-          <Routes>
-            <Route exact path="/" element={<Home />} />
-            <Route exact path="/project" element={<Projects />}>
-              <Route exact path="/project/1" element={<Survivor />} />
-              <Route exact path="/project/2" element={<AppleMusic />} />
-              <Route exact path="/project/3" element={<Goodreads />} />
-            </Route>
-            <Route path="*" element={<Home />} />
-          </Routes>
-        </Suspense>
+        <Routes>
+          <Route exact path="/" element={<Home />} />
+          <Route exact path="/project" element={<Projects />}>
+            <Route exact path="/project/1" element={<Survivor />} />
+            <Route exact path="/project/2" element={<AppleMusic />} />
+            <Route exact path="/project/3" element={<Goodreads />} />
+          </Route>
+          <Route path="*" element={<Home />} />
+        </Routes>
         <ScrollToTop
           className="cursor-pointer sticky bottom-[24px] right-[24px] ml-auto mb-[24px] h-[75px] w-[75px]"
           onClick={() => headerRef.current.scrollIntoView()}
