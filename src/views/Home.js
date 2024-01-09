@@ -1,11 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 import HomeProject from "../components/HomeProject";
 import FigmaLogo from "../assets/home/figma.png";
 import GoogleLogo from "../assets/home/google.png";
 import CodeLogo from "../assets/home/code.png";
 import ResearchLogo from "../assets/home/research.png";
 import SurvivorHome from "../assets/home/survivor_home.png";
-import MusicNav from "../assets/shared/music_nav.png";
+import MusicHome from "../assets/home/music_home.svg";
 import GoodreadNav from "../assets/shared/goodreads_nav.png";
 
 export const PROJECTS = [
@@ -33,7 +33,7 @@ export const PROJECTS = [
       <img
         alt="Apple Music Screenshot"
         className="h-[500px] w-[386px]"
-        src={MusicNav}
+        src={MusicHome}
       />
     ),
   },
@@ -52,6 +52,9 @@ export const PROJECTS = [
 ];
 
 export const Home = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div className="w-full flex flex-col items-center mb-[16px]">
       <div className="w-full h-[75px] bg-[#E9896A]" />

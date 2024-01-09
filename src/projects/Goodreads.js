@@ -4,7 +4,7 @@ import { VerticalContent } from "../components/VerticalContent";
 
 export const Goodreads = () => {
   useEffect(() => {
-    document.getElementById("header").scrollIntoView();
+    window.scrollTo(0, 0);
   }, []);
 
   return (

@@ -11,10 +11,12 @@ import AppleMusic6 from "../assets/apple_music/am6.png";
 import AppleMusic7 from "../assets/apple_music/am7.png";
 import AppleMusic8 from "../assets/apple_music/am8.png";
 import { Divider } from "../components/Divider";
+import { SpotifyCompAnalysis } from "../components/SpotifyCompAnalysis";
+import { TidalCompAnalysis } from "../components/TidalCompAnalysis";
 
 export const AppleMusic = () => {
   useEffect(() => {
-    document.getElementById("header").scrollIntoView();
+    window.scrollTo(0, 0);
   }, []);
 
   return (
@@ -58,10 +60,8 @@ export const AppleMusic = () => {
         title="Competitor Analysis"
         descriptionOne="My first step in this project was to identify how the competitors allow users to manage their music queue. I looked at the premium versions of both Spotify and Tidal to see what was good, bad, and loved by the users."
       />
-      {/* Two Competitor Sections Go Here */}
-      <span className="text-center text-[30px] italic">
-        **Competitor Content Goes Here**
-      </span>
+      <SpotifyCompAnalysis />
+      <TidalCompAnalysis />
       <SubContent
         title="Creating the feature"
         descriptionOne="My main priority when designing the new queue was to allow the user to chose exactly where they wanted their song to play."

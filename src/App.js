@@ -19,8 +19,7 @@ function App() {
     <div className="App bg-[#F8F5F1]">
       {/* Header */}
       <div
-        className="w-full border-b-[2px] border-[#343F56] pl-[80px]"
-        id="header"
+        className="sticky top-0 z-10 bg-[#F8F5F1] w-full border-b-[2px] border-[#343F56] pl-[80px]"
         ref={headerRef}
       >
         <h1
@@ -32,7 +31,7 @@ function App() {
       </div>
 
       {/* Content */}
-      <div className="relative">
+      <div className="relative" id="header">
         <Routes>
           <Route exact path="/" element={<Home />} />
           <Route exact path="/project" element={<Projects />}>

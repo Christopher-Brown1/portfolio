@@ -40,7 +40,7 @@ const images = [
 
 export const Survivor = () => {
   useEffect(() => {
-    document.getElementById("header").scrollIntoView();
+    window.scrollTo(0, 0);
   }, []);
 
   return (
