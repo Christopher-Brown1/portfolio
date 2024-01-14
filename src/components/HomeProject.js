@@ -6,8 +6,8 @@ export const HomeProject = (props) => {
 
   return (
     <div
-      className={`flex max-w-[1200px] my-[64px] ${
-        props.i === 1 && "flex flex-row-reverse"
+      className={`flex flex-col sm:flex-row max-w-[1200px] my-[64px] ${
+        props.i === 1 ? "flex sm:flex-row-reverse" : ""
       }`}
     >
       {props.src}
