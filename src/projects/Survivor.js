@@ -27,6 +27,8 @@ import Survivor15 from "../assets/survivor/survivor_15.png";
 import Survivor16 from "../assets/survivor/survivor_16.png";
 import VSIcon from "../assets/survivor/vs.png";
 import ArrowIcon from "../assets/survivor/arrow.png";
+import LeftArrow from "../assets/survivor/arrow_left.svg";
+import RightArrow from "../assets/survivor/arrow_right.svg";
 
 const images = [
   { original: Journey1 },
@@ -57,18 +59,21 @@ export const Survivor = () => {
         descriptionTwo={null}
         // src={Survivor2}
         customImage={
-          <ImageGallery
-            infinite={false}
-            items={images}
-            renderLeftNav={(onClick, disabled) => (
-              <LeftNav onClick={onClick} disabled={disabled} />
-            )}
-            renderRightNav={(onClick, disabled) => (
-              <RightNav onClick={onClick} disabled={disabled} />
-            )}
-            showFullscreenButton={false}
-            showPlayButton={false}
-          />
+          <div className="px-[20px]">
+            <ImageGallery
+              infinite={false}
+              items={images}
+              renderLeftNav={(onClick, disabled) => (
+                <LeftNav onClick={onClick} disabled={disabled} />
+              )}
+              renderRightNav={(onClick, disabled) => (
+                <RightNav onClick={onClick} disabled={disabled} />
+              )}
+              showFullscreenButton={false}
+              showPlayButton={false}
+              additionalClass="w-full"
+            />
+          </div>
         }
         textWidth="max-w-[750px]"
       />
@@ -162,7 +167,7 @@ const LeftNav = React.memo(({ disabled, onClick }) => {
       onClick={onClick}
       aria-label="Previous Slide"
     >
-      Back
+      <img alt="back arrow" src={LeftArrow} />
     </button>
   );
 });
@@ -175,7 +180,7 @@ const RightNav = React.memo(({ disabled, onClick }) => {
       onClick={onClick}
       aria-label="Next Slide"
     >
-      Next
+      <img alt="next arrow" src={RightArrow} fill="white" />
     </button>
   );
 });

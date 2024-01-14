@@ -11,7 +11,7 @@ export const HorizontalContent = ({
 
   return (
     <div
-      className={`flex-col max-w-[1024px] mt-[${top}] mb-[${bottom}] mx-[auto]`}
+      className={`flex flex-col max-w-[1024px] mt-[${top}] mb-[${bottom}] mx-[auto] p-[20px]`}
     >
       {props.title && (
         <h4 className="mb-[64px] text-[36px] text-[#343F56] text-center font-montserrat">
@@ -24,20 +24,14 @@ export const HorizontalContent = ({
             {props.src.map((src, i) => (
               <img
                 alt="survivor UI screenshot"
-                className={`max-w-[initial] ${
-                  i !== props.src.length - 1 && "mb-[32px]"
-                }`}
+                className={`${i !== props.src.length - 1 && "mb-[32px]"}`}
                 key={i}
                 src={src}
               />
             ))}
           </div>
         ) : (
-          <img
-            alt="survivor UI screenshot"
-            className="max-w-[initial]"
-            src={props.src}
-          />
+          <img alt="survivor UI screenshot" src={props.src} />
         )}
         <div
           className={`text-center w-66% my-auto flex-col justify-evenly ${

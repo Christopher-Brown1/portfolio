@@ -6,14 +6,14 @@ export const HomeProject = (props) => {
 
   return (
     <div
-      className={`flex flex-col sm:flex-row max-w-[1200px] my-[64px] ${
+      className={`flex flex-col sm:flex-row max-w-[1200px] mx-[24px] my-[64px] ${
         props.i === 1 ? "flex sm:flex-row-reverse" : ""
       }`}
     >
       {props.src}
       <div
         className={`text-center my-auto flex-col justify-evenly ${
-          props.i === 1 ? "mr-[4%]" : "ml-[4%]"
+          props.i === 1 ? "sm:mr-[4%]" : "ml-[4%]"
         }`}
       >
         <h4 className="mb-[64px] text-[36px] text-[#343F56] font-montserrat">
@@ -26,7 +26,7 @@ export const HomeProject = (props) => {
           <p className="text-[$343F56] text-left">{props.descriptionTwo}</p>
         )}
         <button
-          className="text-[#387C6D] text-[19px] font-montserrat shadow-button border border-2 border-[#387C6D] rounded-[13px] px-[32px] py-[16px] ml-[64px] mt-[64px]"
+          className="text-[#387C6D] text-[19px] font-montserrat shadow-button border border-2 border-[#387C6D] rounded-[13px] px-[32px] py-[16px] sm:ml-[64px] mt-[64px]"
           onClick={() => navigate(`project/${props.i + 1}`)}
         >
           View case study

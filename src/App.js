@@ -40,7 +40,6 @@ function App() {
   return (
     <div className="App bg-[#F8F5F1]">
       {/* Header */}
-      <span />
       <div className="flex justify-between box-border sticky top-0 z-10 bg-[#F8F5F1] w-full border-b-[2px] border-[#343F56] px-[32px] sm:px-[80px]">
         <div className="flex">
           <h1
@@ -89,7 +88,7 @@ function App() {
 
       {/* Footer */}
       <div className="w-full bg-[#343F56] text-[#F8F5F1]">
-        <div className="flex justify-between items-center pb-[16px] pt-[20px] px-[80px]">
+        <div className="flex justify-between items-center pb-[16px] pt-[20px] px-[12px] sm:px-[80px]">
           <div>
             <h2 className="font-megrim text-[32px] leading-[38.4px] font-medium border-b border-[#387C6D] p-0">
               Christopher Brown

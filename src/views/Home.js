@@ -59,12 +59,12 @@ export const Home = () => {
     <div className="w-full flex flex-col items-center mb-[16px]">
       <div className="w-full h-[75px] bg-[#E9896A]" />
       <div className="w-full h-[75px] bg-[#387C6D] shadow-home flex items-center justify-end">
-        <h2 className="text-[#F8F5F1] text-[36px] mr-[80px]">
+        <h2 className="text-[#F8F5F1] text-[36px] mr-[20px] sm:mr-[80px]">
           Hello! I’m Chris,
         </h2>
       </div>
       <div className="w-full h-[75px] bg-[#343F56] shadow-home flex items-center justify-end">
-        <h2 className="text-[#F8F5F1] text-[36px] mr-[80px]">
+        <h2 className="text-[#F8F5F1] text-[36px] mr-[20px] sm:mr-[80px]">
           a UI/UX designer.
         </h2>
       </div>
@@ -83,7 +83,7 @@ export const Home = () => {
         develop empathy for others. Now, it is my turn to help find solutions
         for life’s tech problems, and make it look good in the process!
       </p>
-      <div className="flex">
+      <div className="flex flex-col sm:flex-row">
         <a
           className="text-[#387C6D] text-[19px] font-montserrat shadow-button block border border-2 border-[#387C6D] rounded-[13px] px-[32px] py-[16px]"
           href={`${process.env.PUBLIC_URL}/christopher_resume.pdf`}
@@ -93,7 +93,7 @@ export const Home = () => {
           Resume
         </a>
         <a
-          className="text-[#387C6D] text-[19px] font-montserrat shadow-button block border border-2 border-[#387C6D] rounded-[13px] px-[32px] py-[16px] ml-[64px]"
+          className="text-[#387C6D] text-[19px] font-montserrat shadow-button block border border-2 border-[#387C6D] rounded-[13px] px-[32px] py-[16px] mt-[32px] sm:ml-[64px] sm:mt-0 text-center"
           href="https://www.linkedin.com/in/chrisbrownuiux/"
           rel="noopener noreferrer"
           target="_blank"
@@ -101,32 +101,32 @@ export const Home = () => {
           LinkedIn
         </a>
         <a
-          className="text-[#387C6D] text-[19px] font-montserrat shadow-button block border border-2 border-[#387C6D] rounded-[13px] px-[32px] py-[16px] ml-[64px]"
+          className="text-[#387C6D] text-[19px] font-montserrat shadow-button block border border-2 border-[#387C6D] rounded-[13px] px-[32px] py-[16px] mt-[32px] sm:ml-[64px] sm:mt-0 text-center"
           href="mailto: chrisbrownuiux@gmail.com"
         >
           Email
         </a>
       </div>
-      <div className="flex justify-between w-full max-w-[1200px] py-[16px] mt-[64px]">
+      <div className="flex flex-col sm:flex-row justify-between items-center w-full max-w-[1200px] py-[16px] mt-[64px]">
         <div className="flex items-center">
           <img alt="figma logo" src={FigmaLogo} />
           <h4 className="ml-[10px] font-montserrat text-[19px] text-[#387C6D]">
             Figma
           </h4>
         </div>
-        <div className="flex items-center">
+        <div className="flex items-center mt-[32px] sm:mt-0">
           <img alt="google logo" src={GoogleLogo} />
           <h4 className="ml-[10px] font-montserrat text-[19px] text-[#387C6D]">
             Google Workspace
           </h4>
         </div>
-        <div className="flex items-center">
+        <div className="flex items-center mt-[32px] sm:mt-0">
           <img alt="test tube icon" src={ResearchLogo} />
           <h4 className="ml-[10px] font-montserrat text-[19px] text-[#387C6D]">
             UX Research
           </h4>
         </div>
-        <div className="flex items-center">
+        <div className="flex items-center mt-[32px] sm:mt-0">
           <img alt="code block icon" src={CodeLogo} />
           <h4 className="ml-[10px] font-montserrat text-[19px] text-[#387C6D]">
             Basic HTML, CSS, and JS
