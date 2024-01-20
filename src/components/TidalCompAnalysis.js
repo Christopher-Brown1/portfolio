@@ -57,13 +57,13 @@ export const TidalCompAnalysis = (props) => {
             <div className="w-1/3 border-r-[1px] border-r-[#D1E8E2] p-[10px]">
               <p className="text-[#D1E8E2]">Strengths:</p>
               <ul className="list-disc">
-                <li className="text-[#D1E8E2] list-item text-[18px] font-trirong ml-[40px]">
+                <li className="text-[#D1E8E2] list-item text-[18px] font-trirong font-[500] ml-[40px]">
                   Easy to follow.
                 </li>
-                <li className="text-[#D1E8E2] list-item text-[18px] font-trirong ml-[40px]">
+                <li className="text-[#D1E8E2] list-item text-[18px] font-trirong font-[500] ml-[40px]">
                   Continuous music playing.
                 </li>
-                <li className="text-[#D1E8E2] list-item text-[18px] font-trirong ml-[40px]">
+                <li className="text-[#D1E8E2] list-item text-[18px] font-trirong font-[500] ml-[40px]">
                   Easy “Clear queue” process.
                 </li>
               </ul>
@@ -71,7 +71,7 @@ export const TidalCompAnalysis = (props) => {
             <div className="w-1/3 border-r-[1px] border-r-[#D1E8E2] p-[10px]">
               <p className="text-[#D1E8E2]">Weaknesses:</p>
               <ul className="list-disc">
-                <li className="text-[#D1E8E2] list-item text-[18px] font-trirong ml-[40px]">
+                <li className="text-[#D1E8E2] list-item text-[18px] font-trirong font-[500] ml-[40px]">
                   No option to play a new song immediately following the current
                   song.
                 </li>
@@ -80,10 +80,10 @@ export const TidalCompAnalysis = (props) => {
             <div className="w-1/3 p-[10px]">
               <p className="text-[#D1E8E2]">Opportunities:</p>
               <ul className="list-disc">
-                <li className="text-[#D1E8E2] list-item text-[18px] font-trirong ml-[40px]">
+                <li className="text-[#D1E8E2] list-item text-[18px] font-trirong font-[500] ml-[40px]">
                   Simple way to clear queue.{" "}
                 </li>
-                <li className="text-[#D1E8E2] list-item text-[18px] font-trirong ml-[40px]">
+                <li className="text-[#D1E8E2] list-item text-[18px] font-trirong font-[500] ml-[40px]">
                   Label for clear lists.
                 </li>
               </ul>

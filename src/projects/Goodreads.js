@@ -10,6 +10,8 @@ import StyleCard from "../assets/goodreads/style_card.png";
 import WireframeA from "../assets/goodreads/wireframe_a.png";
 import WireframeB from "../assets/goodreads/wireframe_b.png";
 import EfficiencyData from "../assets/goodreads/efficiency_data.png";
+// import GoodReadsDemo from "../assets/goodreads/goodreads_demo.png";
+// import GoodReadsVid from "../assets/apple_music/goodreads_demo.mp4";
 
 export const Goodreads = () => {
   useEffect(() => {
@@ -41,21 +43,21 @@ export const Goodreads = () => {
         title="Current Site Issues"
         descriptionOne={
           <div>
-            <p>
+            <p className="mb-[5px]">
               Based on our research, we identified these major issues with the
               current site:
             </p>
             <ul>
-              <li className="list-disc ml-[20px] mb-6px]">
+              <li className="list-disc ml-[30px] mb-[6px]">
                 Navigation bar is missing labels.
               </li>
-              <li className="list-disc ml-[20px] mb-6px]">
+              <li className="list-disc ml-[30px] mb-[6px]">
                 Overwhelming advertisements.
               </li>
-              <li className="list-disc ml-[20px] mb-6px]">
+              <li className="list-disc ml-[30px] mb-[6px]">
                 Not enough account personalization.
               </li>
-              <li className="list-disc ml-[20px] mb-6px]">
+              <li className="list-disc ml-[30px] mb-[6px]">
                 Too much text covering the page - possibly change the individual
                 book information.
               </li>
@@ -94,7 +96,24 @@ export const Goodreads = () => {
       <VerticalContent
         title="Front End Development"
         descriptionOne="After finishing the design process, I was able to create a prototype website using HTML, CSS, and Javascript. This process helped me better understand the handoff process from designer to developer, as well as improving my design process for better development."
-        // Add demo video here
+        customImage={
+          <iframe
+            title="demo"
+            className="mx-auto"
+            width="393"
+            height="245"
+            src="https://www.youtube.com/embed/NKqwwyoHIoE?controls=0&autoplay=1&muted=1&loop=1"
+          ></iframe>
+          // <video width="250" height="500" autoplay controls="">
+          //   <source src={GoodReadsVid} type="video/mp4" />
+          //   {/* Fallback image below */}
+          //   <img
+          //     alt="survivor UI screenshot"
+          //     className="object-none mx-auto"
+          //     src={GoodReadsDemo}
+          //   />
+          // </video>
+        }
       />
     </div>
   );

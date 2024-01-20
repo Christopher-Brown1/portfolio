@@ -25,11 +25,13 @@ export const VerticalContent = ({
         </h4>
       )}
       <div className="text-center w-66% my-auto flex-col justify-evenly mb-[64px]">
-        <div className={`text-[#343F56] ${textWidth} mx-auto text-left`}>
+        <p
+          className={`text-[#343F56] ${textWidth} mx-auto text-left font-Trirong`}
+        >
           {props.descriptionOne}
-        </div>
+        </p>
         {props.descriptionTwo && (
-          <p className="text-[#343F56] text-left mt-[16px]">
+          <p className="text-[#343F56] text-left font-Trirong mt-[16px]">
             {props.descriptionTwo}
           </p>
         )}

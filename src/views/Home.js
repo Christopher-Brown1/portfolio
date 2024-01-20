@@ -6,7 +6,7 @@ import CodeLogo from "../assets/home/code.png";
 import ResearchLogo from "../assets/home/research.png";
 import SurvivorHome from "../assets/home/survivor_home.png";
 import MusicHome from "../assets/home/music_home.svg";
-import GoodreadNav from "../assets/shared/goodreads_nav.png";
+import GoodreadHome from "../assets/home/goodreads_home.svg";
 
 export const PROJECTS = [
   {
@@ -45,7 +45,7 @@ export const PROJECTS = [
       <img
         alt="Goodreads Website Screenshot"
         className="h-[500px] w-[600px]"
-        src={GoodreadNav}
+        src={GoodreadHome}
       />
     ),
   },
