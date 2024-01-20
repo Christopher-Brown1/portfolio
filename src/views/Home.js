@@ -86,7 +86,7 @@ export const Home = () => {
       <div className="flex flex-col sm:flex-row">
         <a
           className="text-[#387C6D] text-[19px] font-montserrat shadow-button block border border-2 border-[#387C6D] rounded-[13px] px-[32px] py-[16px]"
-          href={`${process.env.PUBLIC_URL}/christopher_resume.pdf`}
+          href={`${process.env.PUBLIC_URL}/resume.pdf`}
           rel="noreferrer"
           target="_blank"
         >

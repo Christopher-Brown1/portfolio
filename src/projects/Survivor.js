@@ -59,7 +59,7 @@ export const Survivor = () => {
         descriptionTwo={null}
         // src={Survivor2}
         customImage={
-          <div className="px-[20px]">
+          <div className="px-[20px] mb-[65px] mx-auto h-[450px] w-[393px]">
             <ImageGallery
               infinite={false}
               items={images}
@@ -162,7 +162,7 @@ const LeftNav = React.memo(({ disabled, onClick }) => {
   return (
     <button
       type="button"
-      className="image-gallery-icon image-gallery-left-nav"
+      className="image-gallery-icon image-gallery-left-nav top-[calc(100%+57px)]"
       disabled={disabled}
       onClick={onClick}
       aria-label="Previous Slide"
@@ -175,7 +175,7 @@ const RightNav = React.memo(({ disabled, onClick }) => {
   return (
     <button
       type="button"
-      className="image-gallery-icon image-gallery-right-nav"
+      className="image-gallery-icon image-gallery-right-nav top-[calc(100%+57px)]"
       disabled={disabled}
       onClick={onClick}
       aria-label="Next Slide"

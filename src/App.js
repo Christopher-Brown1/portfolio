@@ -100,7 +100,9 @@ function App() {
           <div className="flex justify-end">
             <a
               className="flex flex-col items-center mr-[16.5px]"
-              href={`${process.env.PUBLIC_URL}/christopher_resume.pdf`}
+              href={`${process.env.PUBLIC_URL}/resume.pdf`}
+              rel="noreferrer"
+              target="_blank"
             >
               <img alt="" className="h-[30px] w-[30px]" src={ResumeFooter} />
               <p className="text-[#F8F5F1] text-[10px] font-[500] font-trirong">

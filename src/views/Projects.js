@@ -2,7 +2,7 @@ import React from "react";
 import { Outlet, useLocation, useNavigate } from "react-router-dom";
 import { PROJECTS } from "./Home";
 import MusicNav from "../assets/shared/music_nav.png";
-import GoodreadNav from "../assets/shared/goodreads_nav.png";
+import GoodreadNav from "../assets/shared/goodreads_nav.svg";
 import SurvivorHome from "../assets/home/survivor_home.png";
 
 export const Projects = (props) => {

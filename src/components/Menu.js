@@ -1,12 +1,12 @@
 import React from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 
-import MenuArrow from "../assets/shared/menu_arrow.png";
-import HomeIcon from "../assets/shared/home.png";
-import CloseIcon from "../assets/shared/close.png";
-import ResumeIcon from "../assets/shared/resume.png";
-import EmailIcon from "../assets/shared/email.png";
-import LinkedInIcon from "../assets/shared/linkedin.png";
+import MenuArrow from "../assets/shared/menu_arrow.svg";
+import HomeIcon from "../assets/shared/home.svg";
+import CloseIcon from "../assets/shared/close.svg";
+import ResumeIcon from "../assets/shared/resume.svg";
+import EmailIcon from "../assets/shared/email.svg";
+import LinkedInIcon from "../assets/shared/linkedin.svg";
 
 export const Menu = (props) => {
   const location = useLocation();
@@ -86,7 +86,11 @@ export const Menu = (props) => {
           </button>
         </div>
         <div className="flex justify-between items-center border-t-[1px] border-[#387C6D] px-[16px] pt-[16px]">
-          <a href={`${process.env.PUBLIC_URL}/christopher_resume.pdf`}>
+          <a
+            href={`${process.env.PUBLIC_URL}/resume.pdf`}
+            rel="noreferrer"
+            target="_blank"
+          >
             <img alt="home button" src={ResumeIcon} />
           </a>
           <a href="mailto: chrisbrownuiux@gmail.com">

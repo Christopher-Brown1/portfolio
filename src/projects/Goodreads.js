@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { VerticalContent } from "../components/VerticalContent";
 import { HorizontalContent } from "../components/HorizontalContent";
-import GoodReadsIntro from "../assets/goodreads/goodreads_intro.png";
+import GoodReadsIntro from "../assets/goodreads/goodreads_intro.svg";
 import SurveyResults from "../assets/goodreads/survey_results.png";
 import CompetitorAnalysis from "../assets/goodreads/competitor_analysis.png";
 import CurrentSite from "../assets/goodreads/Heuristic.png";
