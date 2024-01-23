@@ -1,4 +1,4 @@
-import React from "react";
+import React from "react"
 
 export const VerticalContent = ({
   bottom = true,
@@ -7,10 +7,10 @@ export const VerticalContent = ({
   textWidth = "max-w-1024px",
   ...props
 }) => {
-  const myClass = () => (reverse ? " flex flex-col-reverse" : " flex flex-col");
-  let customClass = "w-full max-w-[1024px] mx-auto" + myClass();
+  const myClass = () => (reverse ? " flex flex-col-reverse" : " flex flex-col")
+  let customClass = "w-full max-w-[1024px] mx-auto" + myClass()
   if (bottom) {
-    customClass = customClass + " mb-[64px]";
+    customClass = customClass + " mb-[64px]"
   }
 
   return (
@@ -40,12 +40,12 @@ export const VerticalContent = ({
         ? props.customImage
         : props.src &&
           (Array.isArray(props.src) ? (
-            <div className="flex justify-center flex-col sm:flex-row items-start">
+            <div className="flex justify-center flex-col sm:flex-row items-center max-w-[900px] mx-auto">
               {props.src.map((src, i) => (
                 <img
                   alt="survivor UI screenshot"
                   className={`object-none mb-[32px] ${
-                    i !== props.src.length - 1 ? "mr-[64px]" : ""
+                    i !== props.src.length - 1 ? "sm:mr-[64px]" : ""
                   }`}
                   key={i}
                   src={src}
@@ -60,5 +60,5 @@ export const VerticalContent = ({
             />
           ))}
     </div>
-  );
-};
+  )
+}

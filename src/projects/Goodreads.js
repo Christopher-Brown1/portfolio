@@ -1,22 +1,24 @@
-import React, { useEffect } from "react";
-import { VerticalContent } from "../components/VerticalContent";
-import { HorizontalContent } from "../components/HorizontalContent";
-import GoodReadsIntro from "../assets/goodreads/goodreads_intro.svg";
-import SurveyResults from "../assets/goodreads/survey_results.png";
-import CompetitorAnalysis from "../assets/goodreads/competitor_analysis.png";
-import CurrentSite from "../assets/goodreads/Heuristic.png";
-import UserExperience from "../assets/goodreads/user_experience.svg";
-import StyleCard from "../assets/goodreads/style_card.png";
-import WireframeA from "../assets/goodreads/wireframe_a.png";
-import WireframeB from "../assets/goodreads/wireframe_b.png";
-import EfficiencyData from "../assets/goodreads/efficiency_data.png";
+import React, { useEffect } from "react"
+import { VerticalContent } from "../components/VerticalContent"
+import { HorizontalContent } from "../components/HorizontalContent"
+import GoodReadsIntro from "../assets/goodreads/goodreads_intro.svg"
+import SurveyResults from "../assets/goodreads/survey_results.png"
+import CompetitorAnalysis from "../assets/goodreads/competitor_analysis.png"
+import CurrentSite from "../assets/goodreads/Heuristic.png"
+import UserExperience from "../assets/goodreads/user_experience.svg"
+import StyleCardA from "../assets/goodreads/style_guide_a.png"
+import StyleCardB from "../assets/goodreads/style_guide_b.png"
+import StyleCardC from "../assets/goodreads/style_guide_c.png"
+import WireframeA from "../assets/goodreads/wireframe_a.png"
+import WireframeB from "../assets/goodreads/wireframe_b.png"
+import EfficiencyData from "../assets/goodreads/efficiency_data.png"
 // import GoodReadsDemo from "../assets/goodreads/goodreads_demo.png";
 // import GoodReadsVid from "../assets/apple_music/goodreads_demo.mp4";
 
 export const Goodreads = () => {
   useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
+    window.scrollTo(0, 0)
+  }, [])
 
   return (
     <div className="flex flex-col w-full max-w-[1200px] mx-auto">
@@ -80,7 +82,7 @@ export const Goodreads = () => {
       <VerticalContent
         descriptionOne="As a team, we wanted to continue with the neutral theme of the current website/app, while additional colors (taken from Goodreads created graphics) add interest and excitement to the page."
         descriptionTwo="We then started making decisions for button styles, typography, header/footer design, iconography, etc. These items were put together to create our redesign’s style guide."
-        src={StyleCard}
+        src={[StyleCardA, StyleCardB, StyleCardC]}
       />
       <VerticalContent
         title="Wire Framing"
@@ -99,8 +101,7 @@ export const Goodreads = () => {
         customImage={
           <iframe
             title="demo"
-            className="mx-auto"
-            width="393"
+            className="mx-auto w-full max-w-[393px]"
             height="245"
             src="https://www.youtube.com/embed/NKqwwyoHIoE?controls=0&autoplay=1&muted=1&loop=1"
           ></iframe>
@@ -116,7 +117,7 @@ export const Goodreads = () => {
         }
       />
     </div>
-  );
-};
+  )
+}
 
-export default Goodreads;
+export default Goodreads

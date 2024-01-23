@@ -1,4 +1,4 @@
-import React from "react";
+import React from "react"
 
 export const HorizontalContent = ({
   bottom = "64px",
@@ -7,7 +7,7 @@ export const HorizontalContent = ({
   ...props
 }) => {
   const myClass = () =>
-    reverse ? "flex flex-col sm:flex-row-reverse" : "flex flex-col sm:flex-row";
+    reverse ? "flex flex-col sm:flex-row-reverse" : "flex flex-col sm:flex-row"
 
   return (
     <div
@@ -20,7 +20,7 @@ export const HorizontalContent = ({
       )}
       <div className={myClass()}>
         {Array.isArray(props.src) ? (
-          <div className="flex flex-col">
+          <div className="flex flex-col justif-center w-[33%] items-center mx-auto">
             {props.src.map((src, i) => (
               <img
                 alt="survivor UI screenshot"
@@ -52,5 +52,5 @@ export const HorizontalContent = ({
         </div>
       </div>
     </div>
-  );
-};
+  )
+}

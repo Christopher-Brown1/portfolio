@@ -1,24 +1,24 @@
-import React, { useEffect } from "react";
-import { VerticalContent } from "../components/VerticalContent";
-import { HorizontalContent } from "../components/HorizontalContent";
-import { SubContent } from "../components/SubContent";
-import AppleMusic1 from "../assets/apple_music/am1.png";
-// import AppleMusic2 from "../assets/apple_music/am2.png";
-import AppleMusic3 from "../assets/apple_music/am3.png";
-import AppleMusic4 from "../assets/apple_music/am4.png";
-import AppleMusic5 from "../assets/apple_music/am5.png";
-import AppleMusic6 from "../assets/apple_music/am6.png";
-import AppleMusic7 from "../assets/apple_music/am7.png";
-import AppleMusic8 from "../assets/apple_music/am8.png";
-// import AppleMusicVid from "../assets/apple_music/am2.mp4";
-import { Divider } from "../components/Divider";
-import { SpotifyCompAnalysis } from "../components/SpotifyCompAnalysis";
-import { TidalCompAnalysis } from "../components/TidalCompAnalysis";
+import React, { useEffect } from "react"
+import { VerticalContent } from "../components/VerticalContent"
+import { HorizontalContent } from "../components/HorizontalContent"
+import { SubContent } from "../components/SubContent"
+import AppleMusic1 from "../assets/apple_music/am1.png"
+import AppleMusic2 from "../assets/apple_music/am2.png"
+import AppleMusic3 from "../assets/apple_music/am3.png"
+import AppleMusic4 from "../assets/apple_music/am4.png"
+import AppleMusic5 from "../assets/apple_music/am5.png"
+import AppleMusic6 from "../assets/apple_music/am6.png"
+import AppleMusic7 from "../assets/apple_music/am7.png"
+import AppleMusic8 from "../assets/apple_music/am8.png"
+import AppleMusicVid from "../assets/apple_music/pin_music.mp4"
+import { Divider } from "../components/Divider"
+import { SpotifyCompAnalysis } from "../components/SpotifyCompAnalysis"
+import { TidalCompAnalysis } from "../components/TidalCompAnalysis"
 
 export const AppleMusic = () => {
   useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
+    window.scrollTo(0, 0)
+  }, [])
 
   return (
     <div className="flex flex-col w-full max-w-[1200px] mx-auto">
@@ -31,22 +31,22 @@ export const AppleMusic = () => {
         title="Feature #1: Pin Favorite Music"
         descriptionOne="Your favorite artist has just released the album of the year. It is all you can listen to. Flash forward to next week when new music has been released again. You find other songs that you enjoy, but you still keep going back to that album. Eventually, all of your recently added music has pushed your beloved album off of the homepage. Instantly, listening takes a few more steps and a little more time. Introducing pinned music, where you can pin favorite albums, playlists, artists, or songs directly from your library for easy access whenever you want."
         customImage={
-          <iframe
-            title="demo"
+          <video
             className="mx-auto rounded-[41px]"
             width="250"
             height="500"
-            src="https://www.youtube.com/embed/44321BJI-1E?controls=0&autoplay=1&muted=1&loop=1"
-          ></iframe>
-          // <video width="250" height="500" autoplay controls="">
-          //   <source src={AppleMusicVid} type="video/mp4" />
-          //   {/* Fallback image below */}
-          //   <img
-          //     alt="survivor UI screenshot"
-          //     className="object-none mx-auto"
-          //     src={AppleMusic2}
-          //   />
-          // </video>
+            muted={true}
+            playsInline={true}
+            controls={true}
+            src={AppleMusicVid}
+          >
+            {/* Fallback image below */}
+            <img
+              alt="survivor UI screenshot"
+              className="object-none mx-auto"
+              src={AppleMusic2}
+            />
+          </video>
         }
       />
       <HorizontalContent
@@ -119,7 +119,7 @@ export const AppleMusic = () => {
         View Prototype
       </button>
     </div>
-  );
-};
+  )
+}
 
-export default AppleMusic;
+export default AppleMusic

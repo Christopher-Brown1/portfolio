@@ -1,24 +1,24 @@
-import React from "react";
-import { Outlet, useLocation, useNavigate } from "react-router-dom";
-import { PROJECTS } from "./Home";
-import MusicNav from "../assets/shared/music_nav.png";
-import GoodreadNav from "../assets/shared/goodreads_nav.svg";
-import SurvivorHome from "../assets/home/survivor_home.png";
+import React from "react"
+import { Outlet, useLocation, useNavigate } from "react-router-dom"
+import { PROJECTS } from "./Home"
+import MusicNav from "../assets/shared/music_nav.png"
+import GoodreadNav from "../assets/shared/goodreads_nav.svg"
+import SurvivorHome from "../assets/home/survivor_home.png"
 
 export const Projects = (props) => {
-  const navigate = useNavigate();
-  const location = useLocation();
-  const currentProject = PROJECTS[location.pathname.split("").pop() - 1];
+  const navigate = useNavigate()
+  const location = useLocation()
+  const currentProject = PROJECTS[location.pathname.split("").pop() - 1]
 
   const getImage = (project) => {
     if (project.title === "Apple Music - New Features") {
-      return MusicNav;
+      return MusicNav
     } else if (project.title === "Goodreads Website Redesign") {
-      return GoodreadNav;
+      return GoodreadNav
     } else if (project.title === "Survivor Companion App") {
-      return SurvivorHome;
+      return SurvivorHome
     }
-  };
+  }
 
   return (
     <div className="w-full">
@@ -39,8 +39,8 @@ export const Projects = (props) => {
           <div
             className={
               i !== PROJECTS.length - 2
-                ? "flex flex-col w-[25%] cursor-pointer mr-[64px]"
-                : "flex flex-col w-[25%] cursor-pointer"
+                ? "flex flex-col w-[48%] sm:w-[25%] cursor-pointer mr-[4%] sm:mr-[64px]"
+                : "flex flex-col w-[48%] sm:w-[25%] cursor-pointer"
             }
             key={i}
             onClick={() =>
@@ -66,7 +66,7 @@ export const Projects = (props) => {
         ))}
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Projects;
+export default Projects
