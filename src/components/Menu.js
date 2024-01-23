@@ -1,30 +1,30 @@
-import React from "react";
-import { useLocation, useNavigate } from "react-router-dom";
+import React from "react"
+import { useLocation, useNavigate } from "react-router-dom"
 
-import MenuArrow from "../assets/shared/menu_arrow.svg";
-import HomeIcon from "../assets/shared/home.svg";
-import CloseIcon from "../assets/shared/close.svg";
-import ResumeIcon from "../assets/shared/resume.svg";
-import EmailIcon from "../assets/shared/email.svg";
-import LinkedInIcon from "../assets/shared/linkedin.svg";
+import MenuArrow from "../assets/shared/menu_arrow.svg"
+import HomeIcon from "../assets/shared/home.svg"
+import CloseIcon from "../assets/shared/close.svg"
+import ResumeIcon from "../assets/shared/resume.svg"
+import EmailIcon from "../assets/shared/email.svg"
+import LinkedInIcon from "../assets/shared/linkedin.svg"
 
 export const Menu = (props) => {
-  const location = useLocation();
-  const navigate = useNavigate();
-  const project = location.pathname.split("/").slice(-1)[0];
+  const location = useLocation()
+  const navigate = useNavigate()
+  const project = location.pathname.split("/").slice(-1)[0]
 
   const menuText = () => {
     switch (project) {
       case "1":
-        return "Survivor Companion App";
+        return "Survivor Companion App"
       case "2":
-        return "Apple Music - New Features";
+        return "Apple Music - New Features"
       case "3":
-        return "Goodreads Website Redesign";
+        return "Goodreads Website Redesign"
       default:
-        return "Home";
+        return "Home"
     }
-  };
+  }
   return (
     <React.Fragment>
       {props.isOpen && (
@@ -39,9 +39,9 @@ export const Menu = (props) => {
             <div className="flex justify-between items-center border-b-[1px] border-[#387C6D] px-[16px] pb-[16px]">
               <button
                 onClick={(e) => {
-                  e.stopPropagation();
-                  props.setIsOpen(false);
-                  navigate("/");
+                  e.stopPropagation()
+                  props.setIsOpen(false)
+                  navigate("/")
                 }}
               >
                 <img alt="home button" src={HomeIcon} />
@@ -49,8 +49,8 @@ export const Menu = (props) => {
               <p className="text-[48px] font-megrim">CB</p>
               <button
                 onClick={(e) => {
-                  e.stopPropagation();
-                  props.setIsOpen(false);
+                  e.stopPropagation()
+                  props.setIsOpen(false)
                 }}
               >
                 <img alt="close menu button" src={CloseIcon} />
@@ -62,9 +62,9 @@ export const Menu = (props) => {
                   project === "1" ? " font-[900]" : " font-[400]"
                 }`}
                 onClick={(e) => {
-                  e.stopPropagation();
-                  props.setIsOpen(false);
-                  navigate(`project/1`);
+                  e.stopPropagation()
+                  props.setIsOpen(false)
+                  navigate(`project/1`)
                 }}
               >
                 Survivor Companion App
@@ -74,9 +74,9 @@ export const Menu = (props) => {
                   project === "2" ? " font-[900]" : " font-[400]"
                 }`}
                 onClick={(e) => {
-                  e.stopPropagation();
-                  props.setIsOpen(false);
-                  navigate(`project/2`);
+                  e.stopPropagation()
+                  props.setIsOpen(false)
+                  navigate(`project/2`)
                 }}
               >
                 Apple Music - New Features
@@ -86,28 +86,43 @@ export const Menu = (props) => {
                   project === "3" ? " font-[900]" : " font-[400]"
                 }`}
                 onClick={(e) => {
-                  e.stopPropagation();
-                  props.setIsOpen(false);
-                  navigate(`project/3`);
+                  e.stopPropagation()
+                  props.setIsOpen(false)
+                  navigate(`project/3`)
                 }}
               >
                 Goodreads Website Redesign
               </button>
             </div>
             <div className="flex justify-between items-center border-t-[1px] border-[#387C6D] px-[16px] pt-[16px]">
-              <a
-                href={`${process.env.PUBLIC_URL}/resume.pdf`}
-                rel="noreferrer"
-                target="_blank"
-              >
-                <img alt="home button" src={ResumeIcon} />
-              </a>
-              <a href="mailto: chrisbrownuiux@gmail.com">
-                <img alt="close menu button" src={EmailIcon} />
-              </a>
-              <a href="https://www.linkedin.com/in/chrisbrownuiux/">
-                <img alt="close menu button" src={LinkedInIcon} />
-              </a>
+              <div className="flex flex-col items-center">
+                <a
+                  href={`${process.env.PUBLIC_URL}/resume.pdf`}
+                  rel="noreferrer"
+                  target="_blank"
+                >
+                  <img alt="home button" src={ResumeIcon} />
+                </a>
+                <p className="text-[10px] font-[500] font-trirong leading-[7px] mt-[4px]">
+                  Resume
+                </p>
+              </div>
+              <div className="flex flex-col items-center">
+                <a href="mailto: chrisbrownuiux@gmail.com">
+                  <img alt="close menu button" src={EmailIcon} />
+                </a>
+                <p className="text-[10px] font-[500] font-trirong leading-[7px] mt-[4px]">
+                  Email
+                </p>
+              </div>
+              <div className="flex flex-col items-center">
+                <a href="https://www.linkedin.com/in/chrisbrownuiux/">
+                  <img alt="close menu button" src={LinkedInIcon} />
+                </a>
+                <p className="text-[10px] font-[500] font-trirong leading-[7px] mt-[4px]">
+                  LinkedIn
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -125,7 +140,7 @@ export const Menu = (props) => {
         />
       </button>
     </React.Fragment>
-  );
-};
+  )
+}
 
-export default Menu;
+export default Menu
