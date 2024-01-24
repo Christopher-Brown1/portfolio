@@ -31,22 +31,27 @@ export const AppleMusic = () => {
         title="Feature #1: Pin Favorite Music"
         descriptionOne="Your favorite artist has just released the album of the year. It is all you can listen to. Flash forward to next week when new music has been released again. You find other songs that you enjoy, but you still keep going back to that album. Eventually, all of your recently added music has pushed your beloved album off of the homepage. Instantly, listening takes a few more steps and a little more time. Introducing pinned music, where you can pin favorite albums, playlists, artists, or songs directly from your library for easy access whenever you want."
         customImage={
-          <video
-            className="mx-auto rounded-[41px]"
-            width="250"
-            height="500"
-            muted={true}
-            playsInline={true}
-            controls={true}
-            src={AppleMusicVid}
-          >
-            {/* Fallback image below */}
-            <img
-              alt="survivor UI screenshot"
-              className="object-none mx-auto"
-              src={AppleMusic2}
-            />
-          </video>
+          <React.Fragment>
+            <video
+              className="mx-auto rounded-[41px]"
+              width="250"
+              height="500"
+              muted={true}
+              playsInline={true}
+              controls={true}
+              src={AppleMusicVid}
+            >
+              {/* Fallback image below */}
+              <img
+                alt="survivor UI screenshot"
+                className="object-none mx-auto"
+                src={AppleMusic2}
+              />
+            </video>
+            <p className="text-[19px] font-montserrat font-[400] text-[#000] mx-auto mt-[16px]">
+              Demo video
+            </p>
+          </React.Fragment>
         }
       />
       <HorizontalContent
@@ -65,9 +70,6 @@ export const AppleMusic = () => {
         descriptionOne="In order to pin new music, I had to identify how a user would go about pinning new items. Using the already existing Apple Music song menu, I created a new option to “Pin ____” with the second part of the option changing depending on what type of item you are wanting to pin."
         src={AppleMusic5}
       />
-      <button className="text-[#387C6D] text-[19px] font-montserrat shadow-button border border-2 border-[#387C6D] rounded-[13px] px-[32px] py-[16px] mx-auto mt-[32px]">
-        View Prototype
-      </button>
       <Divider bottom="64px" />
       <VerticalContent
         bottom={false}
@@ -115,9 +117,6 @@ export const AppleMusic = () => {
         descriptionOne="New placement of shuffle, repeat, and autoplay buttons that is easier to reach and doesn’t cause clutter in the new queue area."
         src={AppleMusic8}
       />
-      <button className="text-[#387C6D] text-[19px] font-montserrat shadow-button border border-2 border-[#387C6D] rounded-[13px] px-[32px] py-[16px] mx-auto">
-        View Prototype
-      </button>
     </div>
   )
 }

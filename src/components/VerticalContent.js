@@ -24,18 +24,20 @@ export const VerticalContent = ({
           {props.title}
         </h4>
       )}
-      <div className="text-center w-66% my-auto flex-col justify-evenly mb-[64px]">
-        <p
-          className={`text-[#343F56] ${textWidth} mx-auto text-left font-Trirong`}
-        >
-          {props.descriptionOne}
-        </p>
-        {props.descriptionTwo && (
-          <p className="text-[#343F56] text-left font-Trirong mt-[16px]">
-            {props.descriptionTwo}
+      {(props.descriptionOne || props.descriptionTwo) && (
+        <div className="text-center w-66% my-auto flex-col justify-evenly mb-[64px]">
+          <p
+            className={`text-[#343F56] ${textWidth} mx-auto text-left font-Trirong`}
+          >
+            {props.descriptionOne}
           </p>
-        )}
-      </div>
+          {props.descriptionTwo && (
+            <p className="text-[#343F56] text-left font-Trirong mt-[16px]">
+              {props.descriptionTwo}
+            </p>
+          )}
+        </div>
+      )}
       {props.customImage
         ? props.customImage
         : props.src &&
@@ -44,7 +46,7 @@ export const VerticalContent = ({
               {props.src.map((src, i) => (
                 <img
                   alt="survivor UI screenshot"
-                  className={`object-none mb-[32px] ${
+                  className={`sm:object-none mb-[32px] ${
                     i !== props.src.length - 1 ? "sm:mr-[64px]" : ""
                   }`}
                   key={i}
@@ -55,7 +57,7 @@ export const VerticalContent = ({
           ) : (
             <img
               alt="survivor UI screenshot"
-              className="object-none mx-auto"
+              className="sm:object-none mx-auto"
               src={props.src}
             />
           ))}

@@ -1,34 +1,34 @@
-import React, { useEffect } from "react";
-import ImageGallery from "react-image-gallery";
+import React, { useEffect } from "react"
+import ImageGallery from "react-image-gallery"
 
-import { HorizontalContent } from "../components/HorizontalContent";
-import { VerticalContent } from "../components/VerticalContent";
-import Survivor1 from "../assets/survivor/survivor_1.png";
-import Journey1 from "../assets/survivor/journey1.svg";
-import Journey2 from "../assets/survivor/journey2.svg";
-import Journey3 from "../assets/survivor/journey3.svg";
-import Journey4 from "../assets/survivor/journey4.svg";
-import Journey5 from "../assets/survivor/journey5.svg";
-import Journey6 from "../assets/survivor/journey6.svg";
-import Journey7 from "../assets/survivor/journey7.svg";
-import Survivor3 from "../assets/survivor/survivor_3.png";
-import Survivor4 from "../assets/survivor/survivor_4.png";
-import Survivor5 from "../assets/survivor/survivor_5.png";
-import Survivor6 from "../assets/survivor/survivor_6.png";
-import Survivor7 from "../assets/survivor/survivor_7.png";
-import Survivor8 from "../assets/survivor/survivor_8.png";
-import Survivor9 from "../assets/survivor/survivor_9.png";
-import Survivor10 from "../assets/survivor/survivor_10.png";
-import Survivor11 from "../assets/survivor/survivor_11.png";
-import Survivor12 from "../assets/survivor/survivor_12.png";
-import Survivor13 from "../assets/survivor/survivor_13.png";
-import Survivor14 from "../assets/survivor/survivor_14.png";
-import Survivor15 from "../assets/survivor/survivor_15.png";
-import Survivor16 from "../assets/survivor/survivor_16.png";
-import VSIcon from "../assets/survivor/vs.png";
-import ArrowIcon from "../assets/survivor/arrow.png";
-import LeftArrow from "../assets/survivor/arrow_left.svg";
-import RightArrow from "../assets/survivor/arrow_right.svg";
+import { HorizontalContent } from "../components/HorizontalContent"
+import { VerticalContent } from "../components/VerticalContent"
+import Survivor1 from "../assets/survivor/survivor_1.png"
+import Journey1 from "../assets/survivor/journey1.svg"
+import Journey2 from "../assets/survivor/journey2.svg"
+import Journey3 from "../assets/survivor/journey3.svg"
+import Journey4 from "../assets/survivor/journey4.svg"
+import Journey5 from "../assets/survivor/journey5.svg"
+import Journey6 from "../assets/survivor/journey6.svg"
+import Journey7 from "../assets/survivor/journey7.svg"
+import Survivor3 from "../assets/survivor/survivor_3.png"
+import Survivor4 from "../assets/survivor/survivor_4.png"
+import Survivor5 from "../assets/survivor/survivor_5.png"
+import Survivor6 from "../assets/survivor/survivor_6.png"
+import Survivor7 from "../assets/survivor/survivor_7.png"
+import Survivor8 from "../assets/survivor/survivor_8.png"
+import Survivor9 from "../assets/survivor/survivor_9.png"
+import Survivor10 from "../assets/survivor/survivor_10.png"
+import Survivor11 from "../assets/survivor/survivor_11.png"
+import Survivor12 from "../assets/survivor/survivor_12.png"
+import Survivor13 from "../assets/survivor/survivor_13.png"
+import Survivor14 from "../assets/survivor/survivor_14.png"
+import Survivor15 from "../assets/survivor/survivor_15.png"
+import Survivor16 from "../assets/survivor/survivor_16.png"
+import VSIcon from "../assets/survivor/vs.png"
+import ArrowIcon from "../assets/survivor/arrow.png"
+import LeftArrow from "../assets/survivor/arrow_left.svg"
+import RightArrow from "../assets/survivor/arrow_right.svg"
 
 const images = [
   { original: Journey1 },
@@ -38,12 +38,12 @@ const images = [
   { original: Journey5 },
   { original: Journey6 },
   { original: Journey7 },
-];
+]
 
 export const Survivor = () => {
   useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
+    window.scrollTo(0, 0)
+  }, [])
 
   return (
     <div className="flex flex-col w-full max-w-[1200px] mx-auto">
@@ -149,14 +149,19 @@ export const Survivor = () => {
           </React.Fragment>
         }
       />
-      <button className="text-[#387C6D] text-[19px] font-montserrat shadow-button border border-2 border-[#387C6D] rounded-[13px] px-[32px] py-[16px] mx-auto">
+      <a
+        className="text-[#387C6D] text-[19px] font-montserrat shadow-button border border-2 border-[#387C6D] rounded-[13px] px-[32px] py-[16px] mx-auto"
+        href="https://www.figma.com/proto/AP4lgiQhit1mrTvFz6jujb/Survivor-Comp-App?page-id=2%3A4&type=design&node-id=3-536&viewport=55%2C-86%2C0.24&t=rDbm8FNVCA4EWKYy-1&scaling=scale-down&starting-point-node-id=3%3A536"
+        target="_blank"
+        rel="noreferrer"
+      >
         View Prototype
-      </button>
+      </a>
     </div>
-  );
-};
+  )
+}
 
-export default Survivor;
+export default Survivor
 
 const LeftNav = React.memo(({ disabled, onClick }) => {
   return (
@@ -169,8 +174,8 @@ const LeftNav = React.memo(({ disabled, onClick }) => {
     >
       <img alt="back arrow" src={LeftArrow} />
     </button>
-  );
-});
+  )
+})
 const RightNav = React.memo(({ disabled, onClick }) => {
   return (
     <button
@@ -182,5 +187,5 @@ const RightNav = React.memo(({ disabled, onClick }) => {
     >
       <img alt="next arrow" src={RightArrow} fill="white" />
     </button>
-  );
-});
+  )
+})

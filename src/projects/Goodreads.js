@@ -9,6 +9,7 @@ import UserExperience from "../assets/goodreads/user_experience.svg"
 import StyleCardA from "../assets/goodreads/style_guide_a.png"
 import StyleCardB from "../assets/goodreads/style_guide_b.png"
 import StyleCardC from "../assets/goodreads/style_guide_c.png"
+import StyleCard from "../assets/goodreads/style_card.png"
 import WireframeA from "../assets/goodreads/wireframe_a.png"
 import WireframeB from "../assets/goodreads/wireframe_b.png"
 import EfficiencyData from "../assets/goodreads/efficiency_data.png"
@@ -78,11 +79,14 @@ export const Goodreads = () => {
         descriptionOne="Using a persona we created, we created a scenario that a typical user might experience and how our redesign would help improve their experience."
         src={UserExperience}
       />
-      <VerticalContent title="Style Guide" />
+      <VerticalContent
+        title="Style Guide"
+        src={[StyleCardA, StyleCardB, StyleCardC]}
+      />
       <VerticalContent
         descriptionOne="As a team, we wanted to continue with the neutral theme of the current website/app, while additional colors (taken from Goodreads created graphics) add interest and excitement to the page."
         descriptionTwo="We then started making decisions for button styles, typography, header/footer design, iconography, etc. These items were put together to create our redesign’s style guide."
-        src={[StyleCardA, StyleCardB, StyleCardC]}
+        src={StyleCard}
       />
       <VerticalContent
         title="Wire Framing"

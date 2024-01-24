@@ -34,7 +34,7 @@ export const HorizontalContent = ({
           <img alt="survivor UI screenshot" src={props.src} />
         )}
         <div
-          className={`text-center w-66% my-auto flex-col justify-evenly ${
+          className={`text-center w-[66%] my-auto flex-col justify-evenly ${
             reverse ? "mr-[4%]" : "ml-[4%]"
           }`}
         >
