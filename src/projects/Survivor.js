@@ -59,7 +59,7 @@ export const Survivor = () => {
         descriptionTwo={null}
         // src={Survivor2}
         customImage={
-          <div className="px-[20px] mb-[65px] mx-auto h-[450px] w-[393px]">
+          <div className="mx-[20px] mb-[65px] h-[450px] max-w-[393px]">
             <ImageGallery
               infinite={false}
               items={images}
@@ -71,7 +71,6 @@ export const Survivor = () => {
               )}
               showFullscreenButton={false}
               showPlayButton={false}
-              additionalClass="w-full"
             />
           </div>
         }

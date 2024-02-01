@@ -20,7 +20,7 @@ export const HorizontalContent = ({
       )}
       <div className={myClass()}>
         {Array.isArray(props.src) ? (
-          <div className="flex flex-col justif-center w-[33%] items-center mx-auto">
+          <div className="flex flex-col justif-center w-full sm:w-[33%] items-center mx-auto">
             {props.src.map((src, i) => (
               <img
                 alt="survivor UI screenshot"
@@ -34,8 +34,8 @@ export const HorizontalContent = ({
           <img alt="survivor UI screenshot" src={props.src} />
         )}
         <div
-          className={`text-center w-[66%] my-auto flex-col justify-evenly ${
-            reverse ? "mr-[4%]" : "ml-[4%]"
+          className={`text-center w-full sm:w-[66%] my-auto flex-col justify-evenly ${
+            reverse ? "mr-[4%]" : "sm:ml-[4%]"
           }`}
         >
           <p className="text-[$343F56] mb-[16px] text-left">

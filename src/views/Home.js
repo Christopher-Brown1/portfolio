@@ -1,12 +1,12 @@
-import React, { useEffect } from "react";
-import HomeProject from "../components/HomeProject";
-import FigmaLogo from "../assets/home/figma.png";
-import GoogleLogo from "../assets/home/google.png";
-import CodeLogo from "../assets/home/code.png";
-import ResearchLogo from "../assets/home/research.png";
-import SurvivorHome from "../assets/home/survivor_home.png";
-import MusicHome from "../assets/home/music_home.svg";
-import GoodreadHome from "../assets/home/goodreads_home.svg";
+import React, { useEffect } from "react"
+import HomeProject from "../components/HomeProject"
+import FigmaLogo from "../assets/home/figma.png"
+import GoogleLogo from "../assets/home/google.png"
+import CodeLogo from "../assets/home/code.png"
+import ResearchLogo from "../assets/home/research.png"
+import SurvivorHome from "../assets/home/survivor_home.png"
+import MusicHome from "../assets/home/music_home.svg"
+import GoodreadHome from "../assets/home/goodreads_home.svg"
 
 export const PROJECTS = [
   {
@@ -49,12 +49,12 @@ export const PROJECTS = [
       />
     ),
   },
-];
+]
 
 export const Home = () => {
   useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
+    window.scrollTo(0, 0)
+  }, [])
   return (
     <div className="w-full flex flex-col items-center mb-[16px]">
       <div className="w-full h-[75px] bg-[#E9896A]" />
@@ -72,13 +72,13 @@ export const Home = () => {
       <h3 className="text-center text-[48px] text-[#343F56] font-montserrat mb-[64px] my-[32px]">
         About Me
       </h3>
-      <p className="text-[18px] text-[#343F56] font-trirong max-w-[1200px] mx-auto">
+      <p className="text-[18px] text-[#343F56] font-trirong max-w-[1024px] mx-[24px]">
         Before I became a UI/UX designer, I taught elementary school. During
         this time I was able to develop strong presentation, organization, and
         adaptability skills. I also have experience working in a professional
         writing environment as a contracted writer.
       </p>
-      <p className="text-[18px] text-[#343F56] font-trirong max-w-[1200px] mx-auto mt-[18px] mb-[64px]">
+      <p className="text-[18px] text-[#343F56] font-trirong max-w-[1024px] mx-[24px] mt-[18px] mb-[64px]">
         I have a strong moral drive to understand people. I have worked hard to
         develop empathy for others. Now, it is my turn to help find solutions
         for life’s tech problems, and make it look good in the process!
@@ -141,7 +141,7 @@ export const Home = () => {
         <HomeProject {...project} i={i} key={i} />
       ))}
     </div>
-  );
-};
+  )
+}
 
-export default Home;
+export default Home

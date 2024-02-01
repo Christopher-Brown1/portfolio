@@ -13,8 +13,7 @@ import StyleCard from "../assets/goodreads/style_card.png"
 import WireframeA from "../assets/goodreads/wireframe_a.png"
 import WireframeB from "../assets/goodreads/wireframe_b.png"
 import EfficiencyData from "../assets/goodreads/efficiency_data.png"
-// import GoodReadsDemo from "../assets/goodreads/goodreads_demo.png";
-// import GoodReadsVid from "../assets/apple_music/goodreads_demo.mp4";
+import GoodReadsVid from "../assets/goodreads/prototype_demo.mp4"
 
 export const Goodreads = () => {
   useEffect(() => {
@@ -103,21 +102,33 @@ export const Goodreads = () => {
         title="Front End Development"
         descriptionOne="After finishing the design process, I was able to create a prototype website using HTML, CSS, and Javascript. This process helped me better understand the handoff process from designer to developer, as well as improving my design process for better development."
         customImage={
-          <iframe
-            title="demo"
-            className="mx-auto w-full max-w-[393px]"
-            height="245"
-            src="https://www.youtube.com/embed/NKqwwyoHIoE?controls=0&autoplay=1&muted=1&loop=1"
-          ></iframe>
-          // <video width="250" height="500" autoplay controls="">
-          //   <source src={GoodReadsVid} type="video/mp4" />
-          //   {/* Fallback image below */}
-          //   <img
-          //     alt="survivor UI screenshot"
-          //     className="object-none mx-auto"
-          //     src={GoodReadsDemo}
-          //   />
-          // </video>
+          // <iframe
+          //   title="demo"
+          //   className="mx-auto w-full max-w-[393px]"
+          //   height="245"
+          //   src="https://www.youtube.com/embed/NKqwwyoHIoE?controls=0&autoplay=1&muted=1&loop=1"
+          // ></iframe>
+          <React.Fragment>
+            <video
+              className="mx-auto"
+              width="400"
+              height="250"
+              muted={true}
+              playsInline={true}
+              controls={true}
+              src={GoodReadsVid}
+            >
+              {/* Fallback image below */}
+              <img
+                alt="survivor UI screenshot"
+                className="object-none mx-auto"
+                src={GoodReadsIntro}
+              />
+            </video>
+            <p className="text-[19px] font-montserrat font-[400] text-[#000] mx-auto mt-[16px]">
+              Demo video
+            </p>
+          </React.Fragment>
         }
       />
     </div>

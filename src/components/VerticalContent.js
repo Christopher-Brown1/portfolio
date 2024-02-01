@@ -25,9 +25,9 @@ export const VerticalContent = ({
         </h4>
       )}
       {(props.descriptionOne || props.descriptionTwo) && (
-        <div className="text-center w-66% my-auto flex-col justify-evenly mb-[64px]">
+        <div className="text-center sm:w-66% my-auto flex-col justify-evenly mb-[64px] mx-[24px]">
           <p
-            className={`text-[#343F56] ${textWidth} mx-auto text-left font-Trirong`}
+            className={`text-[#343F56] w-full ${textWidth} mx-auto text-left font-Trirong`}
           >
             {props.descriptionOne}
           </p>
