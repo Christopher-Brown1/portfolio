@@ -38,7 +38,7 @@ export const HorizontalContent = ({
             reverse ? "mr-[4%]" : "sm:ml-[4%]"
           }`}
         >
-          <p className="text-[$343F56] mb-[16px] text-left">
+          <p className="text-[$343F56] mb-[16px] mt-[20px] sm:mt-0 text-left">
             {props.descriptionOne}
           </p>
           {props.descriptionTwo && (

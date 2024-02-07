@@ -1,13 +1,13 @@
-import React, { useState } from "react";
+import React, { useState } from "react"
 
-import Tidal from "../assets/apple_music/tidal.svg";
-import Spotify from "../assets/apple_music/spotify.svg";
-import ArrowDown from "../assets/apple_music/Arrow_down.svg";
-import ArrowUp from "../assets/apple_music/arrow_up.svg";
+import Tidal from "../assets/apple_music/tidal.svg"
+import Spotify from "../assets/apple_music/spotify.svg"
+import ArrowDown from "../assets/apple_music/Arrow_down.svg"
+import ArrowUp from "../assets/apple_music/arrow_up.svg"
 
 export const CompAnalysisTemplate = ({ photo, children }) => {
-  const [isOpen, setIsOpen] = useState(false);
-  const bgColor = photo === "spotify" ? "#387C6D" : "#343F56";
+  const [isOpen, setIsOpen] = useState(false)
+  const bgColor = photo === "spotify" ? "#387C6D" : "#343F56"
 
   return (
     <div
@@ -40,11 +40,11 @@ export const CompAnalysisTemplate = ({ photo, children }) => {
       </div>
       {isOpen && (
         <div
-          className={`w-full max-w-[1024px] mx-[auto] px-[64px] bg-[${bgColor}]`}
+          className={`w-full max-w-[1024px] mx-[auto] px-[24px] sm:px-[64px] bg-[${bgColor}]`}
         >
           {children}
         </div>
       )}
     </div>
-  );
-};
+  )
+}
