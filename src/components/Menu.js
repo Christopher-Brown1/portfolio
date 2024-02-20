@@ -29,7 +29,7 @@ export const Menu = (props) => {
     <React.Fragment>
       {props.isOpen && (
         <div
-          className="w-screen h-screen fixed left-0"
+          className="w-screen h-screen fixed left-0 top-0"
           onClick={() => props.setIsOpen(false)}
         >
           <div

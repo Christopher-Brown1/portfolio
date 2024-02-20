@@ -48,6 +48,8 @@ export const VerticalContent = ({
                   alt="survivor UI screenshot"
                   className={`sm:object-none mb-[32px] ${
                     i !== props.src.length - 1 ? "sm:mr-[64px]" : ""
+                  }${
+                    props.srcStyles?.index === i ? props.srcStyles.override : ""
                   }`}
                   key={i}
                   src={src}
