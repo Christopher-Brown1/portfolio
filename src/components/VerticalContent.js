@@ -7,10 +7,14 @@ export const VerticalContent = ({
   textWidth = "max-w-1024px",
   ...props
 }) => {
-  const myClass = () => (reverse ? " flex flex-col-reverse" : " flex flex-col")
+  const myClass = () =>
+    reverse
+      ? " flex flex-col-reverse items-center"
+      : " flex flex-col items-center"
   let customClass = "w-full max-w-[1024px] mx-auto" + myClass()
   if (bottom) {
-    customClass = customClass + " mb-[64px]"
+    customClass =
+      customClass + (props.customImage ? " mb-[120px]" : " mb-[64px]")
   }
 
   return (

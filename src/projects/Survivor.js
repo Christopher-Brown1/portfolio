@@ -112,13 +112,13 @@ export const Survivor = () => {
         title="Iterations"
         descriptionOne="Various iterations were made based on user feedback to improve how the app looked and was used. These iterations focused on readability, industry standards, and accessibility."
         src={[Survivor11, ArrowIcon, Survivor12]}
-        srcStyles={{ index: 1, override: " rotate-90" }}
+        srcStyles={{ index: 1, override: " rotate-90 sm:rotate-0" }}
         textWidth="max-w-[600px]"
       />
       <VerticalContent
         descriptionOne="Various iterations were made based on user feedback to improve how the app looked and was used. These iterations focused on readability, industry standards, and accessibility."
         src={[Survivor13, ArrowIcon, Survivor14]}
-        srcStyles={{ index: 1, override: " rotate-90" }}
+        srcStyles={{ index: 1, override: " rotate-90 sm:rotate-0" }}
         textWidth="max-w-[600px]"
       />
       <VerticalContent
