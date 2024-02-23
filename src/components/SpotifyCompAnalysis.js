@@ -1,8 +1,8 @@
 import React from "react"
 import { CompAnalysisTemplate } from "./CompAnalysisTemplate"
-import SpotifyQueue from "../assets/apple_music/spotify_queue.svg"
-import SpotifyMenu from "../assets/apple_music/spotify_menu.svg"
-import SpotifyUpdatedMenu from "../assets/apple_music/spotify_updated_menu.svg"
+import SpotifyQueue from "../assets/apple_music/spotify_queue.png"
+import SpotifyMenu from "../assets/apple_music/spotify_menu.png"
+import SpotifyUpdatedMenu from "../assets/apple_music/spotify_updated_menu.png"
 
 export const SpotifyCompAnalysis = (props) => {
   return (

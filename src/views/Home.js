@@ -5,8 +5,8 @@ import GoogleLogo from "../assets/home/google.png"
 import CodeLogo from "../assets/home/code.png"
 import ResearchLogo from "../assets/home/research.png"
 import SurvivorHome from "../assets/home/survivor_home.png"
-import MusicHome from "../assets/home/music_home.svg"
-import GoodreadHome from "../assets/home/goodreads_home.svg"
+import MusicHome from "../assets/home/music_home.png"
+import GoodreadHome from "../assets/home/goodreads_home.png"
 
 export const PROJECTS = [
   {

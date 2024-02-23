@@ -1,11 +1,11 @@
 import React from "react"
 import { CompAnalysisTemplate } from "./CompAnalysisTemplate"
 
-import TidalA from "../assets/apple_music/tidal_a.svg"
-import TidalB from "../assets/apple_music/tidal_b.svg"
-import TidalC from "../assets/apple_music/tidal_c.svg"
-import TidalD from "../assets/apple_music/tidal_d.svg"
-import TidalE from "../assets/apple_music/tidal_e.svg"
+import TidalA from "../assets/apple_music/tidal_a.png"
+import TidalB from "../assets/apple_music/tidal_b.png"
+import TidalC from "../assets/apple_music/tidal_c.png"
+import TidalD from "../assets/apple_music/tidal_d.png"
+import TidalE from "../assets/apple_music/tidal_e.png"
 
 export const TidalCompAnalysis = (props) => {
   return (
