@@ -41,13 +41,7 @@ export const PROJECTS = [
     title: "Goodreads Website Redesign",
     descriptionOne:
       "With a group of fellow bootcamp students, we identified a website that we use and would like to update. My group chose the beloved Goodreads website. With an impressive app, but a poor website, we conducted research and tests to identify what was wrong with the current site, and then created a prototype website based on our design.",
-    src: (
-      <img
-        alt="Goodreads Website Screenshot"
-        className="h-[500px] w-[600px]"
-        src={GoodreadHome}
-      />
-    ),
+    src: <img alt="Goodreads Website Screenshot" src={GoodreadHome} />,
   },
 ]
 
