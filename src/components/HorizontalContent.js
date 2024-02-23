@@ -19,20 +19,23 @@ export const HorizontalContent = ({
         </h4>
       )}
       <div className={myClass()}>
-        {Array.isArray(props.src) ? (
-          <div className="flex flex-col justif-center w-full sm:w-[33%] items-center mx-auto">
-            {props.src.map((src, i) => (
-              <img
-                alt="survivor UI screenshot"
-                className={`${i !== props.src.length - 1 && "mb-[32px]"}`}
-                key={i}
-                src={src}
-              />
+        {props.customImage
+          ? props.customImage
+          : props.src &&
+            (Array.isArray(props.src) ? (
+              <div className="flex flex-col justify-center w-full sm:w-[33%] items-center mx-auto">
+                {props.src.map((src, i) => (
+                  <img
+                    alt="survivor UI screenshot"
+                    className={`${i !== props.src.length - 1 && "mb-[32px]"}`}
+                    key={i}
+                    src={src}
+                  />
+                ))}
+              </div>
+            ) : (
+              <img alt="survivor UI screenshot" src={props.src} />
             ))}
-          </div>
-        ) : (
-          <img alt="survivor UI screenshot" src={props.src} />
-        )}
         <div
           className={`text-center w-full sm:w-[66%] my-auto flex-col justify-evenly ${
             reverse ? "mr-[4%]" : "sm:ml-[4%]"

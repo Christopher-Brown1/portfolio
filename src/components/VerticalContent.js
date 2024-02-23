@@ -46,7 +46,7 @@ export const VerticalContent = ({
         ? props.customImage
         : props.src &&
           (Array.isArray(props.src) ? (
-            <div className="flex justify-center flex-col sm:flex-row items-center max-w-[900px] mx-auto">
+            <div className="flex justify-center flex-col sm:flex-row items-center max-w-[900px] mx-[24px]">
               {props.src.map((src, i) => (
                 <img
                   alt="survivor UI screenshot"

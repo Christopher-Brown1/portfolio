@@ -8,7 +8,7 @@ export const SpotifyCompAnalysis = (props) => {
   return (
     <CompAnalysisTemplate photo="spotify">
       <div>
-        <div className="flex pt-[32px]">
+        <div className="flex flex-col sm:flex-row pt-[32px]">
           <div className="flex flex-col justify-center">
             <img alt="screenshot of music queue" src={SpotifyQueue} />
             <p className="text-[#D1E8E2] text-center mt-[16px]">
@@ -17,8 +17,12 @@ export const SpotifyCompAnalysis = (props) => {
               added to the queue.
             </p>
           </div>
-          <div className="flex flex-col justify-center ml-[20px] sm:ml-[64px]">
-            <img alt="screenshot of music menu" src={SpotifyMenu} />
+          <div className="flex flex-col justify-center items-center sm:ml-[64px]">
+            <img
+              alt="screenshot of music menu"
+              className="max-h-[350px] max-w-[200px] mt-[32px] sm:mt-0"
+              src={SpotifyMenu}
+            />
             <p className="text-[#D1E8E2] text-center mt-[16px]">
               A new song’s menu only gives me one option to add to the queue.
             </p>

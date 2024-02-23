@@ -15,7 +15,7 @@ export const TidalCompAnalysis = (props) => {
           <div className="flex flex-col justify-center sm:mr-[64px]">
             <img
               alt="screenshot of music queue"
-              className="max-h-[400px]"
+              className="max-h-[400px] max-w-[200px] mx-auto"
               src={TidalA}
             />
             <p className="text-[#D1E8E2] text-center mt-[16px] mb-[32px] sm:mb-0">
@@ -26,7 +26,7 @@ export const TidalCompAnalysis = (props) => {
           <div className="flex flex-col justify-center sm:mr-[64px]">
             <img
               alt="screenshot of music queue"
-              className="max-h-[400px]"
+              className="max-h-[320px] max-w-[200px] mx-auto"
               src={TidalB}
             />
             <p className="text-[#D1E8E2] text-center mt-[16px] mb-[32px] sm:mb-0">
@@ -37,7 +37,7 @@ export const TidalCompAnalysis = (props) => {
           <div className="flex flex-col justify-center sm:mr-[64px]">
             <img
               alt="screenshot of music queue"
-              className="max-h-[400px]"
+              className="max-h-[400px] max-w-[200px] mx-auto"
               src={TidalC}
             />
             <p className="text-[#D1E8E2] text-center mt-[16px] mb-[32px] sm:mb-0">
@@ -48,7 +48,7 @@ export const TidalCompAnalysis = (props) => {
           <div className="flex flex-col justify-center">
             <img
               alt="screenshot of music queue"
-              className="max-h-[400px]"
+              className="max-h-[350px] max-w-[200px] mx-auto"
               src={TidalD}
             />
             <p className="text-[#D1E8E2] text-center mt-[16px] mb-[32px] sm:mb-0">
@@ -63,7 +63,11 @@ export const TidalCompAnalysis = (props) => {
         </div>
         <div className="flex flex-col sm:flex-row items-center mt-[32px] pb-[32px]">
           <div className="flex flex-col justify-center sm:mr-[64px] sm:w-1/4">
-            <img alt="screenshot of music queue" src={TidalE} />
+            <img
+              alt="screenshot of music queue"
+              className="max-h-[400px] max-w-[200px] mx-auto"
+              src={TidalE}
+            />
             <p className="text-[#D1E8E2] text-center mt-[16px] mb-[32px] sm:mb-0">
               Clicking “Add to play queue” will add the song to the end of Your
               Queue, but before the rest of the Pop Life playlist continues.

@@ -96,7 +96,15 @@ export const Goodreads = () => {
         title="Making it better"
         descriptionOne="Our updated flows in 3 key tasks saved two clicks per task for each user."
         reverse={true}
-        src={EfficiencyData}
+        customImage={
+          <div className="flex flex-col justify-center mx-auto">
+            <img
+              alt="goodreads screenshot"
+              className="max-h-[400px] max-w-[200px]"
+              src={EfficiencyData}
+            />
+          </div>
+        }
       />
       <VerticalContent
         title="Front End Development"
@@ -108,9 +116,9 @@ export const Goodreads = () => {
           //   height="245"
           //   src="https://www.youtube.com/embed/NKqwwyoHIoE?controls=0&autoplay=1&muted=1&loop=1"
           // ></iframe>
-          <React.Fragment>
+          <div className="px-[24px] sm:px-0">
             <video
-              className="mx-auto"
+              className="mx-[auto]"
               width="400"
               height="250"
               muted={true}
@@ -125,10 +133,10 @@ export const Goodreads = () => {
                 src={GoodReadsIntro}
               />
             </video>
-            <p className="text-[19px] font-montserrat font-[400] text-[#000] mx-auto mt-[16px]">
+            <p className="text-[19px] font-montserrat font-[400] text-[#000] text-center mt-[16px]">
               Demo video
             </p>
-          </React.Fragment>
+          </div>
         }
       />
     </div>
