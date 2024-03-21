@@ -25,6 +25,7 @@ import Survivor13 from "../assets/survivor/survivor_13.png"
 import Survivor14 from "../assets/survivor/survivor_14.png"
 import Survivor15 from "../assets/survivor/survivor_15.png"
 import Survivor16 from "../assets/survivor/survivor_16.png"
+import Survivor17 from "../assets/survivor/survivor_17.png"
 import VSIcon from "../assets/survivor/vs.png"
 import ArrowIcon from "../assets/survivor/arrow.png"
 import LeftArrow from "../assets/survivor/arrow_left.svg"
@@ -126,6 +127,30 @@ export const Survivor = () => {
         descriptionOne="During the iteration process, a user made a comment about how the section containers looked throughout the app. I then conducted an A/B test in order to identify which style was preferred by users. The results indicated that users liked how the colorful containers played into the colorful theme of survivor, but they liked how clean the dark version looked. While this helped me decide on the color version, it prompted me to add a colorful, but clean, container update to my future iterations list."
         src={[Survivor15, VSIcon, Survivor16]}
       />
+      <hr className="border-t-[3px] border-t-[#343F56] w-full max-w-[250px] mx-auto mb-[44px]" />
+      <HorizontalContent
+        descriptionOne="In response to the A/B test feedback, the colorful containers became color coordinated tabs with a clean and updated look."
+        reverse={true}
+        src={Survivor17}
+      />
+      <div className="mx-auto mb-[80px]">
+        <a
+          className="text-[#387C6D] text-[19px] font-montserrat shadow-button border border-2 border-[#387C6D] rounded-[13px] px-[32px] py-[16px] mx-auto mr-[64px]"
+          href="https://www.figma.com/proto/AP4lgiQhit1mrTvFz6jujb/Survivor-Comp-App?page-id=2%3A4&type=design&node-id=3-536&viewport=55%2C-86%2C0.24&t=rDbm8FNVCA4EWKYy-1&scaling=scale-down&starting-point-node-id=3%3A536&mode=design"
+          target="_blank"
+          rel="noreferrer"
+        >
+          View Prototype Version 1
+        </a>
+        <a
+          className="text-[#387C6D] text-[19px] font-montserrat shadow-button border border-2 border-[#387C6D] rounded-[13px] px-[32px] py-[16px] mx-auto"
+          href="https://www.figma.com/proto/AP4lgiQhit1mrTvFz6jujb/Survivor-Comp-App?page-id=252%3A2934&type=design&node-id=252-2935&viewport=481%2C269%2C0.12&t=Z7YVhUweRVsPX0LL-1&scaling=scale-down&starting-point-node-id=25"
+          target="_blank"
+          rel="noreferrer"
+        >
+          View Prototype Version 2
+        </a>
+      </div>
       <VerticalContent
         bottom={false}
         title="Next Steps"
@@ -150,14 +175,6 @@ export const Survivor = () => {
           </React.Fragment>
         }
       />
-      <a
-        className="text-[#387C6D] text-[19px] font-montserrat shadow-button border border-2 border-[#387C6D] rounded-[13px] px-[32px] py-[16px] mx-auto"
-        href="https://www.figma.com/proto/AP4lgiQhit1mrTvFz6jujb/Survivor-Comp-App?page-id=2%3A4&type=design&node-id=3-536&viewport=55%2C-86%2C0.24&t=rDbm8FNVCA4EWKYy-1&scaling=scale-down&starting-point-node-id=3%3A536"
-        target="_blank"
-        rel="noreferrer"
-      >
-        View Prototype
-      </a>
     </div>
   )
 }
