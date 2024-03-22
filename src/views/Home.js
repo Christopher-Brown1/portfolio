@@ -18,7 +18,7 @@ export const PROJECTS = [
     src: (
       <img
         alt="Survivor Companion App Screenshot"
-        className="h-[500px] w-[430px]"
+        className="h-[350px] w-[377px]"
         src={SurvivorHome}
       />
     ),
