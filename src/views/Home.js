@@ -63,7 +63,7 @@ export const Home = () => {
         </h2>
       </div>
 
-      <h3 className="text-center text-[48px] text-[#343F56] font-montserrat mb-[64px] my-[32px]">
+      <h3 className="text-center text-[48px] text-[#343F56] font-montserrat my-[32px]">
         About Me
       </h3>
       <p className="text-[18px] text-[#343F56] font-trirong max-w-[1024px] mx-[24px]">

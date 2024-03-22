@@ -16,7 +16,7 @@ export const HomeProject = (props) => {
           props.i === 1 ? "sm:mr-[4%]" : "ml-[4%]"
         }`}
       >
-        <h4 className="mb-[64px] mt-[32px] sm:mt-0 text-[36px] text-[#343F56] font-montserrat">
+        <h4 className=" mb-[32px] sm:mb-[64px] mt-[32px] sm:mt-0 text-[36px] text-[#343F56] font-montserrat">
           {props.title}
         </h4>
         <p className="text-[$343F56] mb-[16px] text-left">
