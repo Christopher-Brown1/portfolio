@@ -41,7 +41,13 @@ export const PROJECTS = [
     title: "Goodreads Website Redesign",
     descriptionOne:
       "With a group of fellow bootcamp students, we identified a website that we use and would like to update. My group chose the beloved Goodreads website. With an impressive app, but a poor website, we conducted research and tests to identify what was wrong with the current site, and then created a prototype website based on our design.",
-    src: <img alt="Goodreads Website Screenshot" src={GoodreadHome} />,
+    src: (
+      <img
+        alt="Goodreads Website Screenshot"
+        className="h-[280px] lg:h-[335px]"
+        src={GoodreadHome}
+      />
+    ),
   },
 ]
 
@@ -101,7 +107,7 @@ export const Home = () => {
           Email
         </a>
       </div>
-      <div className="flex flex-col sm:flex-row justify-between items-center w-full max-w-[1200px] py-[16px] mt-[64px]">
+      <div className="flex flex-col sm:flex-row justify-between items-center w-full max-w-[1200px] px-[16px] py-[16px] mt-[64px]">
         <div className="flex items-center">
           <img alt="figma logo" src={FigmaLogo} />
           <h4 className="ml-[10px] font-montserrat text-[19px] text-[#387C6D]">

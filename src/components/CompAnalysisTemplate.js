@@ -40,7 +40,7 @@ export const CompAnalysisTemplate = ({ photo, children }) => {
       </div>
       {isOpen && (
         <div
-          className={`w-full max-w-[1024px] mx-[auto] px-[24px] sm:px-[64px] bg-[${bgColor}]`}
+          className={`w-full max-w-[1024px] mx-[auto] px-[24px] sm:px-[45px] bg-[${bgColor}]`}
         >
           {children}
         </div>

@@ -11,8 +11,8 @@ export const TidalCompAnalysis = (props) => {
   return (
     <CompAnalysisTemplate photo="tidal">
       <div>
-        <div className="flex flex-col sm:flex-row pt-[32px]">
-          <div className="flex flex-col justify-center sm:mr-[64px]">
+        <div className="flex justify-between md:items-center flex-col sm:flex-row lg:flex-row md:flex-wrap pt-[32px]">
+          <div className="flex flex-col justify-center w-[100%] md:w-[50%] lg:w-[25%]">
             <img
               alt="screenshot of music queue"
               className="max-h-[400px] max-w-[200px] mx-auto"
@@ -23,7 +23,7 @@ export const TidalCompAnalysis = (props) => {
               the Pop Life playlist.
             </p>
           </div>
-          <div className="flex flex-col justify-center sm:mr-[64px]">
+          <div className="flex flex-col justify-center w-[100%] md:w-[50%] lg:w-[25%]">
             <img
               alt="screenshot of music queue"
               className="max-h-[320px] max-w-[200px] mx-auto"
@@ -34,10 +34,10 @@ export const TidalCompAnalysis = (props) => {
               to Play next.
             </p>
           </div>
-          <div className="flex flex-col justify-center sm:mr-[64px]">
+          <div className="flex flex-col justify-center w-[100%] md:w-[50%] lg:w-[25%]">
             <img
               alt="screenshot of music queue"
-              className="max-h-[400px] max-w-[200px] mx-auto"
+              className="max-h-[400px] max-w-[200px] mx-auto md:mt-[32px]"
               src={TidalC}
             />
             <p className="text-[#D1E8E2] text-center mt-[16px] mb-[32px] sm:mb-0">
@@ -45,10 +45,10 @@ export const TidalCompAnalysis = (props) => {
               the song we just added.
             </p>
           </div>
-          <div className="flex flex-col justify-center">
+          <div className="flex flex-col justify-center w-[100%] md:w-[50%] lg:w-[25%]">
             <img
               alt="screenshot of music queue"
-              className="max-h-[350px] max-w-[200px] mx-auto"
+              className="max-h-[350px] max-w-[200px] mx-auto md:mt-[32px]"
               src={TidalD}
             />
             <p className="text-[#D1E8E2] text-center mt-[16px] mb-[32px] sm:mb-0">

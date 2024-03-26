@@ -32,7 +32,7 @@ export const Projects = (props) => {
       <h3 className="text-center text-[36px] text-[#343F56] font-montserrat py-[48px] mt-[64px] w-full border-t-[10px] border-[#E9896A]">
         Other Projects
       </h3>
-      <div className="flex flex-col sm:flex-row justify-center mb-[64px] mx-[20px] sm:mx-0">
+      <div className="flex flex-col sm:flex-row justify-center mb-[64px] mx-[20px] lg:mx-0">
         {PROJECTS.filter(
           (project) => project.title !== currentProject.title
         ).map((project, i) => (

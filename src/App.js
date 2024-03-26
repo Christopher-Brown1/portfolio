@@ -1,49 +1,49 @@
-import { useEffect, useRef, useState } from "react";
-import { Routes, Route, useNavigate, useLocation } from "react-router-dom";
+import { useEffect, useRef, useState } from "react"
+import { Routes, Route, useNavigate, useLocation } from "react-router-dom"
 
-import { Home } from "./views/Home";
-import { Projects } from "./views/Projects";
-import ResumeFooter from "./assets/shared/Resume_footer.png";
-import EmailFooter from "./assets/shared/Email_footer.png";
-import LinkedInFooter from "./assets/shared/Linkedin_footer.png";
-import { ReactComponent as ScrollToTop } from "./assets/shared/Scroll_to_top.svg";
-import Survivor from "./projects/Survivor";
-import AppleMusic from "./projects/AppleMusic";
-import Goodreads from "./projects/Goodreads";
-import { Menu } from "./components/Menu";
-import HeaderStripes from "./assets/shared/header_stripes.png";
+import { Home } from "./views/Home"
+import { Projects } from "./views/Projects"
+import ResumeFooter from "./assets/shared/Resume_footer.png"
+import EmailFooter from "./assets/shared/Email_footer.png"
+import LinkedInFooter from "./assets/shared/Linkedin_footer.png"
+import { ReactComponent as ScrollToTop } from "./assets/shared/Scroll_to_top.svg"
+import Survivor from "./projects/Survivor"
+import AppleMusic from "./projects/AppleMusic"
+import Goodreads from "./projects/Goodreads"
+import { Menu } from "./components/Menu"
+import HeaderStripes from "./assets/shared/header_stripes.png"
 
 function App() {
-  const STTRef = useRef(null);
-  const [isOpen, setIsOpen] = useState(false);
-  const navigate = useNavigate();
-  const location = useLocation();
+  const STTRef = useRef(null)
+  const [isOpen, setIsOpen] = useState(false)
+  const navigate = useNavigate()
+  const location = useLocation()
 
   useEffect(() => {
     // When the user scrolls down 20px from the top of the document, show the button
     window.onscroll = function () {
-      scrollFunction();
-    };
+      scrollFunction()
+    }
 
     function scrollFunction() {
       if (
         document.body.scrollTop > 75 ||
         document.documentElement.scrollTop > 75
       ) {
-        STTRef.current.style.display = "block";
+        STTRef.current.style.display = "block"
       } else {
-        STTRef.current.style.display = "none";
+        STTRef.current.style.display = "none"
       }
     }
-  });
+  })
 
   return (
     <div className="App bg-[#F8F5F1]">
       {/* Header */}
-      <div className="flex justify-between box-border sticky top-0 z-10 bg-[#F8F5F1] w-full border-b-[2px] border-[#343F56] px-[32px] sm:px-[80px]">
+      <div className="flex justify-between box-border sticky top-0 z-10 bg-[#F8F5F1] w-full border-b-[2px] border-[#343F56] px-[32px] sm:px-[80px] md:px-[32px] lg:px-[80px]">
         <div className="flex">
           <h1
-            className="font-megrim text-[48px] text-[#343F56] font-medium py-[16px] cursor-pointer hidden sm:block"
+            className="font-megrim text-[32px] lg:text-[48px] text-[#343F56] font-medium py-[16px] cursor-pointer hidden sm:block"
             onClick={() => navigate("/")}
           >
             Christopher Brown
@@ -80,8 +80,8 @@ function App() {
           className="cursor-pointer sticky bottom-[24px] right-[24px] ml-auto mb-[24px] h-[75px] w-[75px] hidden"
           ref={STTRef}
           onClick={() => {
-            const body = document.querySelector("body");
-            body.scrollIntoView();
+            const body = document.querySelector("body")
+            body.scrollIntoView()
           }}
         />
       </div>
@@ -131,7 +131,7 @@ function App() {
         </div>
       </div>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

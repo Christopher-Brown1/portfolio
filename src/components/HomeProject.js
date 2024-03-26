@@ -6,7 +6,7 @@ export const HomeProject = (props) => {
 
   return (
     <div
-      className={`flex flex-col sm:flex-row max-w-[1200px] mx-[24px] my-[64px] ${
+      className={`flex flex-col sm:flex-row items-center max-w-[1200px] mx-[24px] my-[64px] ${
         props.i === 1 ? "flex sm:flex-row-reverse" : ""
       }`}
     >
@@ -26,7 +26,7 @@ export const HomeProject = (props) => {
           <p className="text-[$343F56] text-left">{props.descriptionTwo}</p>
         )}
         <button
-          className="text-[#387C6D] text-[19px] font-montserrat shadow-button border border-2 border-[#387C6D] rounded-[13px] px-[32px] py-[16px] sm:ml-[64px] mt-[64px]"
+          className="text-[#387C6D] text-[19px] font-montserrat shadow-button border border-2 border-[#387C6D] rounded-[13px] px-[32px] py-[16px] sm:ml-[64px] md:ml-0 mt-[64px]"
           onClick={() => navigate(`project/${props.i + 1}`)}
         >
           View case study
