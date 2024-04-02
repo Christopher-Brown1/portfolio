@@ -128,7 +128,7 @@ export const Menu = (props) => {
         </div>
       )}
       <button
-        className="flex items-center font-montserrat text-[14px] sm:text-[19px] w-1/3 text-[#2a2e2c80] menuButton"
+        className="flex items-center font-montserrat text-[14px] sm:text-[19px] text-[#2a2e2c80] menuButton"
         onClick={() => props.setIsOpen(true)}
       >
         {menuText()}{" "}
