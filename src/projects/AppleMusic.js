@@ -2,7 +2,7 @@ import React, { useEffect } from "react"
 import { VerticalContent } from "../components/VerticalContent"
 import { HorizontalContent } from "../components/HorizontalContent"
 import { SubContent } from "../components/SubContent"
-import AppleMusic1 from "../assets/apple_music/am1.png"
+import AppleMusicIntro from "../assets/apple_music/apple_music_intro.png"
 import AppleMusic2 from "../assets/apple_music/am2.png"
 import AppleMusic3 from "../assets/apple_music/am3.png"
 import AppleMusic4 from "../assets/apple_music/am4.png"
@@ -24,9 +24,10 @@ export const AppleMusic = () => {
     <div className="flex flex-col w-full max-w-[1200px] mx-auto">
       <VerticalContent
         descriptionOne="In this case study, I view one of my most used apps, Apple Music, and highlight potential features that could make the music experience even better."
-        src={AppleMusic1}
+        src={AppleMusicIntro}
+        srcStyles={["max-w-[250px]"]}
       />
-      <Divider />
+      <Divider top="0" bottom="80px" />
       <VerticalContent
         title="Feature #1: Pin Favorite Music"
         descriptionOne="Your favorite artist has just released the album of the year. It is all you can listen to. Flash forward to next week when new music has been released again. You find other songs that you enjoy, but you still keep going back to that album. Eventually, all of your recently added music has pushed your beloved album off of the homepage. Instantly, listening takes a few more steps and a little more time. Introducing pinned music, where you can pin favorite albums, playlists, artists, or songs directly from your library for easy access whenever you want."

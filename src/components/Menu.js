@@ -33,7 +33,7 @@ export const Menu = (props) => {
           onClick={() => props.setIsOpen(false)}
         >
           <div
-            className="absolute bg-[#F8F5F1] border-[3px] border-[#2A2E2C] w-full max-w-[477px] p-[16px] z-10 top-[100px] sm:top-[128px] lg:top-[176px] xl:top-[104px] md:right-[24px] lg:right-[64px]"
+            className="absolute bg-[#F8F5F1] border-[3px] border-[#2A2E2C] w-full max-w-[477px] p-[16px] z-10 top-[100px] sm:top-[128px] lg:top-[105px] xl:top-[104px] md:right-[24px] lg:right-[64px]"
             onClick={(e) => e.stopPropagation()}
           >
             <div className="flex justify-between items-center border-b-[1px] border-[#387C6D] px-[16px] pb-[16px]">

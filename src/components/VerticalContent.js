@@ -5,6 +5,7 @@ export const VerticalContent = ({
   reverse = false,
   textSize = "small",
   textWidth = "max-w-1024px",
+  srcStyles = [],
   ...props
 }) => {
   const myClass = () =>
@@ -13,8 +14,7 @@ export const VerticalContent = ({
       : " flex flex-col items-center"
   let customClass = "w-full max-w-[1024px] mx-auto" + myClass()
   if (bottom) {
-    customClass =
-      customClass + (props.customImage ? " mb-[120px]" : " mb-[64px]")
+    customClass = customClass + " mb-[80px]"
   }
 
   return (
@@ -29,7 +29,7 @@ export const VerticalContent = ({
         </h4>
       )}
       {(props.descriptionOne || props.descriptionTwo) && (
-        <div className="text-center sm:w-66% my-auto flex-col justify-evenly mb-[64px] mx-[24px]">
+        <div className="text-center sm:w-66% my-auto flex-col justify-evenly mb-[32px] mx-[24px]">
           <p
             className={`text-[#343F56] w-full ${textWidth} mx-auto text-left font-Trirong`}
           >
@@ -50,13 +50,11 @@ export const VerticalContent = ({
               {props.src.map((src, i) => (
                 <img
                   alt="survivor UI screenshot"
-                  className={`sm:object-none mb-[32px] ${
+                  className={`mb-[32px] ${
                     i !== props.src.length - 1
-                      ? "sm:mr-[64px] md:mr-0 lg:mr-[64px]"
-                      : ""
-                  }${
-                    props.srcStyles?.index === i ? props.srcStyles.override : ""
-                  }`}
+                      ? "sm:mr-[64px] md:mr-0 lg:mr-[64px] "
+                      : " "
+                  }${srcStyles.length ? srcStyles[i] : ""}`}
                   key={i}
                   src={src}
                 />
@@ -65,7 +63,7 @@ export const VerticalContent = ({
           ) : (
             <img
               alt="survivor UI screenshot"
-              className="sm:object-none mx-auto"
+              className={`mx-auto ${srcStyles[0]}`}
               src={props.src}
             />
           ))}

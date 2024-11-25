@@ -3,7 +3,7 @@ import ImageGallery from "react-image-gallery"
 
 import { HorizontalContent } from "../components/HorizontalContent"
 import { VerticalContent } from "../components/VerticalContent"
-import Survivor1 from "../assets/survivor/survivor_1.png"
+import SurvivorIntro from "../assets/survivor/survivor_intro.png"
 import Journey1 from "../assets/survivor/journey1.png"
 import Journey2 from "../assets/survivor/journey2.png"
 import Journey3 from "../assets/survivor/journey3.png"
@@ -11,21 +11,18 @@ import Journey4 from "../assets/survivor/journey4.png"
 import Journey5 from "../assets/survivor/journey5.png"
 import Journey6 from "../assets/survivor/journey6.png"
 import Journey7 from "../assets/survivor/journey7.png"
-import Survivor3 from "../assets/survivor/survivor_3.png"
-import Survivor4 from "../assets/survivor/survivor_4.png"
-import Survivor5 from "../assets/survivor/survivor_5.png"
-import Survivor6 from "../assets/survivor/survivor_6.png"
-import Survivor7 from "../assets/survivor/survivor_7.png"
-import Survivor8 from "../assets/survivor/survivor_8.png"
-import Survivor9 from "../assets/survivor/survivor_9.png"
-import Survivor10 from "../assets/survivor/survivor_10.png"
-import Survivor11 from "../assets/survivor/survivor_11.png"
-import Survivor12 from "../assets/survivor/survivor_12.png"
-import Survivor13 from "../assets/survivor/survivor_13.png"
-import Survivor14 from "../assets/survivor/survivor_14.png"
-import Survivor15 from "../assets/survivor/survivor_15.png"
-import Survivor16 from "../assets/survivor/survivor_16.png"
-import Survivor17 from "../assets/survivor/survivor_17.png"
+import SurvivorCastawayCard from "../assets/survivor/survivor_castaway_card.png"
+import SurvivorAdvantages from "../assets/survivor/survivor_advantages.png"
+import SurvivorMerch from "../assets/survivor/survivor_merch.png"
+import SurvivorWireframe from "../assets/survivor/survivor_wireframe.png"
+import SurvivorColor from "../assets/survivor/survivor_color.png"
+import SurvivorMenu1 from "../assets/survivor/survivor_menu_1.png"
+import SurvivorMenu2 from "../assets/survivor/survivor_menu_2.png"
+import SurvivorAt1 from "../assets/survivor/survivor_at_1.png"
+import SurvivorAt2 from "../assets/survivor/survivor_at_2.png"
+import SurvivorCast1 from "../assets/survivor/survivor_cast_1.png"
+import SurvivorCast2 from "../assets/survivor/survivor_cast_2.png"
+import TestResult from "../assets/survivor/test_result.png"
 import VSIcon from "../assets/survivor/vs.png"
 import ArrowIcon from "../assets/survivor/arrow.png"
 import LeftArrow from "../assets/survivor/arrow_left.svg"
@@ -55,8 +52,8 @@ export const Survivor = () => {
         customImage={
           <img
             alt="survivor UI screenshot"
-            className="h-[350px] w-[377px] mb-[32px]"
-            src={Survivor1}
+            className="h-[296px] w-[350px] mb-[32px] self-center"
+            src={SurvivorIntro}
           />
         }
       />
@@ -84,61 +81,82 @@ export const Survivor = () => {
         textWidth="max-w-[750px]"
       />
       <HorizontalContent
-        title="Idol and Advantage Tracker"
-        descriptionOne="The first section I needed to include in my app design was for tracking advantages and idols. During this process, I was able to create some custom icons to symbolize the current season’s advantages."
-        descriptionTwo="Future Plans: Allow users to click on an advantage to read the fine print including rules, when the advantage can be used, restrictions, etc."
-        src={Survivor3}
-      />
-      <HorizontalContent
-        title="Player Info and Tribe History"
-        descriptionOne="The game moves fast in the new era of Survivor. Pre-merge comes and goes in the blink of an eye and before you know it, castaways are thrown onto the same beach with few, if any, indicators of previous tribe lines. Survivor season 45 threw another loop by reintroducing tribe swaps during the first half of the game."
-        descriptionTwo="With all of the changes, the next feature that I created was tribe indicators next to each castaway’s name in order to show their tribe history. This colors correspond with the tribes’ colors from original tribes, swapped tribes, merged tribe, and a dark icon to show a player that has been voted out and didn’t participate in a tribe change."
-        descriptionThree="The CBS website also includes brief biographies about the cast, a feature that carries over well to the companion app. Simply click on the profile picture of the cast mate you would like to know more about to view a quick biography."
-        reverse={true}
-        src={[Survivor4, Survivor5]}
+        title="Tracker"
+        descriptionOne="Challenge: Creating a simple-to-read design while still holding lots of information."
+        descriptionTwo={
+          <ul>
+            <li className="list-disc ml-[32px] mb-[6px]">
+              Tribe indicators next to each castaway’s name in order to show
+              their tribe history. This colors correspond with the tribes’
+              colors from original tribes, swapped tribes, merged tribe, and a
+              dark icon to show a player that has been voted out and didn’t
+              participate in a tribe change.
+            </li>
+            <li className="list-disc ml-[32px] mb-[6px]">
+              The CBS website also includes brief biographies about the cast, a
+              feature that carries over well to the companion app. Simply click
+              on the profile picture of the cast mate you would like to know
+              more about to view a quick biography.
+            </li>
+            <li className="list-disc ml-[32px]">
+              Custom made icons to distinguish various advantages.
+            </li>
+          </ul>
+        }
+        descriptionThree="Future Plans: Allow users to click on an advantage to read the fine print including rules, when the advantage can be used, restrictions, etc."
+        src={[SurvivorCastawayCard, SurvivorAdvantages]}
       />
       <VerticalContent
         title="Merchandise"
         descriptionOne="The companion app also features various Survivor merchandise and memorabilia.  From current tribe Buffs to some of host Jeff Probst’s favorite Survivor items. This allows the user to become even more engaged in the fan experience."
         descriptionTwo={null}
-        src={[Survivor6, Survivor7]}
+        src={SurvivorMerch}
+        srcStyles={["w-[275px]"]}
       />
       <HorizontalContent
         title="To Homepage or Not to Homepage"
-        descriptionOne="The original user flow included a homepage that acted as a springboard to other pages on the app. During early testing periods, I identified the homepage as being unnecessary and adding additional steps to the companion app process. It was then decided to make the current season page as the new landing page, allowing users to quickly jump into the relevant information for the current episode."
+        descriptionOne="Challenge: User testing reveals unnecessary steps."
+        descriptionTwo="The original user flow and wireframes included a homepage that acted as a springboard to other pages on the app. During early testing periods, the homepage was identified as unnecessary and adding additional steps to the flow."
+        descriptionThree="I then decided to make the current season page as the new landing page, allowing users to quickly jump into the relevant information for the current episode."
         reverse={true}
-        src={Survivor8}
+        src={SurvivorWireframe}
+        srcStyles={["w-[184px]"]}
       />
       <VerticalContent
         title="Design Decisions"
-        descriptionOne="Each season of Survivor features a new logo, based on the theme for that season. Because of this, Survivor’s colors are always changing and adapting, season to season."
-        descriptionTwo="Because of this, I used a generic Survivor logo to create a base color palette. These colors are used throughout to bring an island feel to the modern style that survivor has gravitated towards. With the current season’s page being the landing page for the app, I decided that the Survivor logo on the app will reflect the current season’s logo."
-        src={[Survivor9, Survivor10]}
+        descriptionOne="Challenge: Each season of Survivor features a new logo, based on the theme for that season. Because of this, Survivor’s colors are always changing and adapting, season to season."
+        descriptionTwo="I used a generic Survivor logo to create a base color palette. These colors are used throughout to bring an island feel to the modern style that the Survivor brand has gravitated towards."
+        src={SurvivorColor}
+        srcStyles={["max-w-[375px] px-[24px] sm:px-0"]}
       />
       <VerticalContent
         title="Iterations"
         descriptionOne="Various iterations were made based on user feedback to improve how the app looked and was used. These iterations focused on readability, industry standards, and accessibility."
-        src={[Survivor11, ArrowIcon, Survivor12]}
-        srcStyles={{ index: 1, override: " rotate-90 sm:rotate-0" }}
+        src={[SurvivorMenu1, ArrowIcon, SurvivorMenu2]}
+        srcStyles={["w-[250px]", "w-auto rotate-90 sm:rotate-0", "w-[250px]"]}
         textWidth="max-w-[600px]"
       />
       <VerticalContent
         descriptionOne="Various iterations were made based on user feedback to improve how the app looked and was used. These iterations focused on readability, industry standards, and accessibility."
-        src={[Survivor13, ArrowIcon, Survivor14]}
-        srcStyles={{ index: 1, override: " rotate-90 sm:rotate-0" }}
+        src={[SurvivorAt1, ArrowIcon, SurvivorAt2]}
+        srcStyles={["w-[250px]", "w-auto rotate-90 sm:rotate-0", "w-[250px]"]}
         textWidth="max-w-[600px]"
       />
       <VerticalContent
         title="A/B Testing"
         descriptionOne="During the iteration process, a user made a comment about how the section containers looked throughout the app. I then conducted an A/B test in order to identify which style was preferred by users. The results indicated that users liked how the colorful containers played into the colorful theme of survivor, but they liked how clean the dark version looked. While this helped me decide on the color version, it prompted me to add a colorful, but clean, container update to my future iterations list."
-        src={[Survivor15, VSIcon, Survivor16]}
+        src={[SurvivorCast1, VSIcon, SurvivorCast2]}
+        srcStyles={["w-[300px]", "", "w-[300px]"]}
       />
-      <hr className="border-t-[3px] border-t-[#343F56] w-full max-w-[250px] mx-auto mb-[44px]" />
-      <HorizontalContent
+      <VerticalContent
         descriptionOne="In response to the A/B test feedback, the colorful containers became color coordinated tabs with a clean and updated look."
-        reverse={true}
-        src={Survivor17}
+        src={TestResult}
+        srcStyles={["max-w-[250px]"]}
+        textWidth="max-w-[600px]"
       />
+      <p className="text-[#343F56] text-[19px] font-montserrat text-center mb-[32px]">
+        View the two prototype versions below:
+      </p>
       <div className="mx-auto mb-[80px] flex flex-col sm:flex-row">
         <a
           className="text-[#387C6D] text-[19px] font-montserrat shadow-button border border-2 border-[#387C6D] rounded-[13px] px-[32px] py-[16px] mx-auto sm:mr-[64px]"
@@ -157,8 +175,8 @@ export const Survivor = () => {
           View Prototype Version 2
         </a>
       </div>
-      <VerticalContent
-        bottom={false}
+      <HorizontalContent
+        center={false}
         title="Next Steps"
         descriptionOne={
           <React.Fragment>
@@ -166,7 +184,7 @@ export const Survivor = () => {
               In addition to the container update, future iterations could
               include:
             </p>
-            <ul className="list-decimal">
+            <ul className="list-disc">
               <li className="list-item ml-[40px]">
                 Connection to Bracketology, the official Survivor fantasy
                 league.

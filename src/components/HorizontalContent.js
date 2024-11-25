@@ -1,20 +1,25 @@
 import React from "react"
 
 export const HorizontalContent = ({
-  bottom = "64px",
+  bottom = "80px",
   top = "0px",
   reverse = false,
+  center = true,
   ...props
 }) => {
   const myClass = () =>
-    reverse ? "flex flex-col sm:flex-row-reverse" : "flex flex-col sm:flex-row"
+    reverse
+      ? "flex flex-col p-[24px] sm:px-0 sm:flex-row-reverse"
+      : "flex flex-col p-[24px] sm:px-0 sm:flex-row"
 
   return (
     <div
-      className={`flex flex-col max-w-[1024px] mt-[${top}] mb-[${bottom}] mx-[auto] p-[20px]`}
+      className={`flex flex-col max-w-[1024px] mt-[${top}] mb-[${bottom}] mx-[${
+        center ? "auto" : "0px"
+      }]`}
     >
       {props.title && (
-        <h4 className="mb-[64px] text-[36px] text-[#343F56] text-center font-montserrat">
+        <h4 className="mb-[32px] text-[36px] text-[#343F56] text-center font-montserrat">
           {props.title}
         </h4>
       )}
@@ -37,8 +42,8 @@ export const HorizontalContent = ({
               <img alt="survivor UI screenshot" src={props.src} />
             ))}
         <div
-          className={`text-center w-full sm:w-[66%] my-auto flex-col justify-evenly ${
-            reverse ? "mr-[4%]" : "sm:ml-[4%]"
+          className={`text-center w-full my-auto flex-col justify-evenly sm:p-0 ${
+            reverse ? "mr-[64px]" : "sm:ml-[64px]"
           }`}
         >
           <p className="text-[$343F56] mb-[16px] mt-[20px] sm:mt-0 text-left">
