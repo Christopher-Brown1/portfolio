@@ -4,9 +4,9 @@ import FigmaLogo from "../assets/home/figma.png"
 import GoogleLogo from "../assets/home/google.png"
 import CodeLogo from "../assets/home/code.png"
 import ResearchLogo from "../assets/home/research.png"
-import SurvivorHome from "../assets/home/survivor_home.png"
-import MusicHome from "../assets/home/music_home.png"
-import GoodreadHome from "../assets/home/goodreads_home.png"
+import SurvivorIntro from "../assets/survivor/survivor_intro.png"
+import AppleMusicIntro from "../assets/apple_music/apple_music_intro.png"
+import GoodreadsIntro from "../assets/goodreads/goodreads_intro.png"
 
 export const PROJECTS = [
   {
@@ -18,8 +18,8 @@ export const PROJECTS = [
     src: (
       <img
         alt="Survivor Companion App Screenshot"
-        className="h-[350px] w-[377px]"
-        src={SurvivorHome}
+        className="h-[321px] w-[379px]"
+        src={SurvivorIntro}
       />
     ),
   },
@@ -32,8 +32,8 @@ export const PROJECTS = [
     src: (
       <img
         alt="Apple Music Screenshot"
-        className="h-[500px] w-[386px]"
-        src={MusicHome}
+        className="h-[508px] w-[250px]"
+        src={AppleMusicIntro}
       />
     ),
   },
@@ -44,8 +44,8 @@ export const PROJECTS = [
     src: (
       <img
         alt="Goodreads Website Screenshot"
-        className="h-[280px] lg:h-[335px]"
-        src={GoodreadHome}
+        className="lg:w-[500px] lg:h-[335px]"
+        src={GoodreadsIntro}
       />
     ),
   },
@@ -58,12 +58,12 @@ export const Home = () => {
   return (
     <div className="w-full flex flex-col items-center mb-[16px]">
       <div className="w-full h-[75px] bg-[#E9896A]" />
-      <div className="w-full h-[75px] bg-[#387C6D] shadow-home flex items-center justify-end">
+      <div className="w-full h-[75px] bg-[#387C6D] flex items-center justify-end">
         <h2 className="text-[#F8F5F1] text-[36px] mr-[20px] sm:mr-[80px]">
           Hello! I’m Chris,
         </h2>
       </div>
-      <div className="w-full h-[75px] bg-[#343F56] shadow-home flex items-center justify-end">
+      <div className="w-full h-[75px] bg-[#343F56] flex items-center justify-end">
         <h2 className="text-[#F8F5F1] text-[36px] mr-[20px] sm:mr-[80px]">
           a UI/UX designer.
         </h2>
@@ -108,26 +108,26 @@ export const Home = () => {
         </a>
       </div>
       <div className="flex flex-col sm:flex-row justify-between items-center w-full max-w-[1200px] px-[16px] py-[16px] mt-[64px]">
-        <div className="flex items-center">
-          <img alt="figma logo" src={FigmaLogo} />
+        <div className="flex items-center flex-col">
+          <img alt="figma logo" className="mb-[8px]" src={FigmaLogo} />
           <h4 className="ml-[10px] font-montserrat text-[19px] text-[#387C6D]">
             Figma
           </h4>
         </div>
-        <div className="flex items-center mt-[32px] sm:mt-0">
-          <img alt="google logo" src={GoogleLogo} />
+        <div className="flex items-center flex-col mt-[32px] sm:mt-0">
+          <img alt="google logo" className="mb-[8px]" src={GoogleLogo} />
           <h4 className="ml-[10px] font-montserrat text-[19px] text-[#387C6D]">
             Google Workspace
           </h4>
         </div>
-        <div className="flex items-center mt-[32px] sm:mt-0">
-          <img alt="test tube icon" src={ResearchLogo} />
+        <div className="flex items-center flex-col mt-[32px] sm:mt-0">
+          <img alt="test tube icon" className="mb-[8px]" src={ResearchLogo} />
           <h4 className="ml-[10px] font-montserrat text-[19px] text-[#387C6D]">
             UX Research
           </h4>
         </div>
-        <div className="flex items-center mt-[32px] sm:mt-0">
-          <img alt="code block icon" src={CodeLogo} />
+        <div className="flex items-center flex-col mt-[32px] sm:mt-0">
+          <img alt="code block icon" className="mb-[8px]" src={CodeLogo} />
           <h4 className="ml-[10px] font-montserrat text-[19px] text-[#387C6D]">
             Basic HTML, CSS, and JS
           </h4>
