@@ -1,8 +1,8 @@
 import React from "react"
 import { Outlet, useLocation, useNavigate } from "react-router-dom"
 import { PROJECTS } from "./Home"
-import AppleMusicIntro from "../assets/apple_music/apple_music_intro.png"
-import GoodreadsIntro from "../assets/goodreads/goodreads_intro.png"
+import AppleMusicIntro from "../assets/apple_music/am_intro.png"
+import GoodreadsIntro from "../assets/goodreads/gr_intro.png"
 import SurvivorIntro from "../assets/survivor/survivor_intro.png"
 
 export const Projects = (props) => {
@@ -68,5 +68,3 @@ export const Projects = (props) => {
     </div>
   )
 }
-
-export default Projects

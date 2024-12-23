@@ -75,5 +75,3 @@ export const SpotifyCompAnalysis = (props) => {
     </CompAnalysisTemplate>
   )
 }
-
-export default SpotifyCompAnalysis

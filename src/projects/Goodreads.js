@@ -1,20 +1,14 @@
 import React, { useEffect } from "react"
 import { VerticalContent } from "../components/VerticalContent"
-import { HorizontalContent } from "../components/HorizontalContent"
-import GoodReadsIntro from "../assets/goodreads/goodreads_intro.png"
-import CompetitorAnalysis from "../assets/goodreads/competitor_analysis.png"
-import CurrentSite from "../assets/goodreads/Heuristic.png"
+import GoodReadsIntro from "../assets/goodreads/gr_intro.png"
+import CompetitorAnalysis from "../assets/goodreads/gr_comp_anal.png"
 import UserExperience from "../assets/goodreads/user_experience.png"
-import StyleCardA from "../assets/goodreads/style_guide_a.png"
-import StyleCardB from "../assets/goodreads/style_guide_b.png"
-import StyleCardC from "../assets/goodreads/style_guide_c.png"
-import StyleCard from "../assets/goodreads/style_card.png"
-import WireframeA from "../assets/goodreads/wireframe_a.png"
-import WireframeB from "../assets/goodreads/wireframe_b.png"
-import EfficiencyData from "../assets/goodreads/efficiency_data.png"
+import GRStyle from "../assets/goodreads/gr_style.png"
+import GRWireframe from "../assets/goodreads/gr_wireframe.png"
+import GRWireframe2 from "../assets/goodreads/gr_wireframe2.png"
 import GoodReadsVid from "../assets/goodreads/prototype_demo.mp4"
 
-export const Goodreads = () => {
+const Goodreads = () => {
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [])
@@ -35,33 +29,7 @@ export const Goodreads = () => {
         title="Competitor Analysis"
         descriptionOne="Next, we identified some competitors to analyze some of their strengths, weaknesses, and opportunities for our redesigned website."
         src={CompetitorAnalysis}
-      />
-      <VerticalContent
-        title="Current Site Issues"
-        descriptionOne={
-          <div>
-            <p className="mb-[5px]">
-              Based on our research, we identified these major issues with the
-              current site:
-            </p>
-            <ul>
-              <li className="list-disc ml-[30px] mb-[6px]">
-                Navigation bar is missing labels.
-              </li>
-              <li className="list-disc ml-[30px] mb-[6px]">
-                Overwhelming advertisements.
-              </li>
-              <li className="list-disc ml-[30px] mb-[6px]">
-                Not enough account personalization.
-              </li>
-              <li className="list-disc ml-[30px] mb-[6px]">
-                Too much text covering the page - possibly change the individual
-                book information.
-              </li>
-            </ul>
-          </div>
-        }
-        src={CurrentSite}
+        width="360px"
       />
       <VerticalContent
         title="Problem Statement"
@@ -75,30 +43,15 @@ export const Goodreads = () => {
       />
       <VerticalContent
         title="Style Guide"
-        src={[StyleCardA, StyleCardB, StyleCardC]}
-      />
-      <VerticalContent
         descriptionOne="As a team, we wanted to continue with the neutral theme of the current website/app, while additional colors (taken from Goodreads created graphics) add interest and excitement to the page."
-        src={StyleCard}
+        src={GRStyle}
+        width="400px"
       />
       <VerticalContent
         title="Wire Framing"
         descriptionOne="With our style guide done, we started to create hand drawn wireframes of the pages/user flows we were updating. Ideas from various wireframes were combined in Figma to create simple wireframes of various fidelities. "
-        src={[WireframeA, WireframeB]}
-      />
-      <HorizontalContent
-        title="Making it better"
-        descriptionOne="Our updated flows in 3 key tasks saved two clicks per task for each user."
-        reverse={true}
-        customImage={
-          <div className="flex flex-col justify-center mx-auto">
-            <img
-              alt="goodreads screenshot"
-              className="max-h-[400px] max-w-[200px]"
-              src={EfficiencyData}
-            />
-          </div>
-        }
+        height="250px"
+        src={[GRWireframe, GRWireframe2]}
       />
       <VerticalContent
         title="Front End Development"

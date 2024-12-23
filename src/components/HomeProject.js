@@ -1,7 +1,7 @@
 import React from "react"
 import { useNavigate } from "react-router-dom"
 
-export const HomeProject = (props) => {
+const HomeProject = (props) => {
   const navigate = useNavigate()
 
   return (

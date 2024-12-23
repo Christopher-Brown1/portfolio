@@ -2,20 +2,20 @@ import React, { useEffect } from "react"
 import { VerticalContent } from "../components/VerticalContent"
 import { HorizontalContent } from "../components/HorizontalContent"
 import { SubContent } from "../components/SubContent"
-import AppleMusicIntro from "../assets/apple_music/apple_music_intro.png"
+import AppleMusicIntro from "../assets/apple_music/am_intro.png"
 import AppleMusic2 from "../assets/apple_music/am2.png"
-import AppleMusic3 from "../assets/apple_music/am3.png"
-import AppleMusic4 from "../assets/apple_music/am4.png"
-import AppleMusic5 from "../assets/apple_music/am5.png"
-import AppleMusic6 from "../assets/apple_music/am6.png"
-import AppleMusic7 from "../assets/apple_music/am7.png"
-import AppleMusic8 from "../assets/apple_music/am8.png"
+import AMPinned from "../assets/apple_music/am_pinned.png"
+import AMIcons from "../assets/apple_music/am_icons.png"
+import AMMenu1 from "../assets/apple_music/am_menu1.png"
+import AMMenu2 from "../assets/apple_music/am_menu2.png"
+import AMQueue from "../assets/apple_music/am_queue.png"
+import AMControl from "../assets/apple_music/am_control.png"
 import AppleMusicVid from "../assets/apple_music/pin_music.mp4"
 import { Divider } from "../components/Divider"
 import { SpotifyCompAnalysis } from "../components/SpotifyCompAnalysis"
 import { TidalCompAnalysis } from "../components/TidalCompAnalysis"
 
-export const AppleMusic = () => {
+const AppleMusic = () => {
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [])
@@ -57,19 +57,22 @@ export const AppleMusic = () => {
       />
       <HorizontalContent
         descriptionOne="When deciding where the pinned music should go, there were two standout options. The first option was to include a new “pinned” item at the top of the library categories. The second option was to put the pinned music below the library categories, and above the recently added section (shown here). I decided to go with the second option in order to decrease the amount of clicks needed to access them."
-        src={AppleMusic3}
+        src={AMPinned}
+        width="275px"
       />
       <HorizontalContent
         bottom="64px"
         // left="32px"
         descriptionOne="When pinning new music, I needed to find a way to differentiate between the different items that can be pinned. Using inspiration from some of the existing iconography from Apple, I created a new set of icons to represent playlists, songs, artists, albums, and genres."
         reverse={true}
-        src={AppleMusic4}
+        src={AMIcons}
+        width="300px"
       />
       <HorizontalContent
         bottom="0"
         descriptionOne="In order to pin new music, I had to identify how a user would go about pinning new items. Using the already existing Apple Music song menu, I created a new option to “Pin ____” with the second part of the option changing depending on what type of item you are wanting to pin."
-        src={AppleMusic5}
+        src={AMMenu1}
+        width="300px"
       />
       <Divider bottom="64px" />
       <VerticalContent
@@ -107,16 +110,19 @@ export const AppleMusic = () => {
             </li>
           </ul>
         }
-        src={AppleMusic6}
+        src={AMMenu2}
+        width="300px"
       />
       <HorizontalContent
         descriptionOne="Next came changes to the queue itself. This allows the queue to be set up to correspond with the new menu buttons and new queue features. The shuffle, repeat, and autoplay buttons have also been removed from the queue for easier readability."
         reverse={true}
-        src={AppleMusic7}
+        src={AMQueue}
+        width="300px"
       />
       <HorizontalContent
         descriptionOne="New placement of shuffle, repeat, and autoplay buttons that is easier to reach and doesn’t cause clutter in the new queue area."
-        src={AppleMusic8}
+        src={AMControl}
+        width="300px"
       />
     </div>
   )

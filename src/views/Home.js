@@ -5,8 +5,8 @@ import GoogleLogo from "../assets/home/google.png"
 import CodeLogo from "../assets/home/code.png"
 import ResearchLogo from "../assets/home/research.png"
 import SurvivorIntro from "../assets/survivor/survivor_intro.png"
-import AppleMusicIntro from "../assets/apple_music/apple_music_intro.png"
-import GoodreadsIntro from "../assets/goodreads/goodreads_intro.png"
+import AppleMusicIntro from "../assets/apple_music/am_intro.png"
+import GoodreadsIntro from "../assets/goodreads/gr_intro.png"
 
 export const PROJECTS = [
   {
@@ -107,7 +107,7 @@ export const Home = () => {
           Email
         </a>
       </div>
-      <div className="flex flex-col sm:flex-row justify-between items-center w-full max-w-[1200px] px-[16px] py-[16px] mt-[64px]">
+      <div className="flex flex-col sm:flex-row justify-between items-center w-full max-w-[1200px] px-[16px] py-[16px] mt-[32px] mb-[16px]">
         <div className="flex items-center flex-col">
           <img alt="figma logo" className="mb-[8px]" src={FigmaLogo} />
           <h4 className="ml-[10px] font-montserrat text-[19px] text-[#387C6D]">
@@ -143,5 +143,3 @@ export const Home = () => {
     </div>
   )
 }
-
-export default Home

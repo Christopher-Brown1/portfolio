@@ -11,7 +11,7 @@ export const CompAnalysisTemplate = ({ photo, children }) => {
 
   return (
     <div
-      className={`w-full max-w-[1024px] mx-[auto]${
+      className={`w-full max-w-[1024px] mx-[auto] px-[24px] sm:px-[64px]${
         photo === "spotify" ? " mb-[32px]" : ""
       }`}
     >

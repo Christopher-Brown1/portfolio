@@ -114,5 +114,3 @@ export const TidalCompAnalysis = (props) => {
     </CompAnalysisTemplate>
   )
 }
-
-export default TidalCompAnalysis

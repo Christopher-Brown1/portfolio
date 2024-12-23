@@ -142,5 +142,3 @@ export const Menu = (props) => {
     </React.Fragment>
   )
 }
-
-export default Menu

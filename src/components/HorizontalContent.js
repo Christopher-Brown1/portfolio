@@ -5,6 +5,7 @@ export const HorizontalContent = ({
   top = "0px",
   reverse = false,
   center = true,
+  width = "initial",
   ...props
 }) => {
   const myClass = () =>
@@ -39,7 +40,11 @@ export const HorizontalContent = ({
                 ))}
               </div>
             ) : (
-              <img alt="survivor UI screenshot" src={props.src} />
+              <img
+                alt="survivor UI screenshot"
+                src={props.src}
+                style={{ width: width }}
+              />
             ))}
         <div
           className={`text-center w-full my-auto flex-col justify-evenly sm:p-0 ${

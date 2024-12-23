@@ -2,9 +2,9 @@ import React from "react"
 
 export const SubContent = (props) => {
   return (
-    <div className="flex-col max-w-[1024px] my-[32px] mx-[24px]">
+    <div className="flex-col max-w-[1024px] my-[32px] mx-auto px-[24px]">
       {props.title && (
-        <h4 className="text-[19px] text-[#343F56] text-center font-montserrat underline">
+        <h4 className="text-[19px] text-[#343F56] text-center font-montserrat underline mb-[32px]">
           {props.title}
         </h4>
       )}
@@ -31,5 +31,3 @@ export const SubContent = (props) => {
     </div>
   )
 }
-
-export default SubContent

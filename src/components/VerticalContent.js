@@ -6,13 +6,16 @@ export const VerticalContent = ({
   textSize = "small",
   textWidth = "max-w-1024px",
   srcStyles = [],
+  height = "initial",
+  width = "initial",
   ...props
 }) => {
   const myClass = () =>
     reverse
       ? " flex flex-col-reverse items-center"
       : " flex flex-col items-center"
-  let customClass = "w-full max-w-[1024px] mx-auto" + myClass()
+  let customClass =
+    "w-full max-w-[1024px] mx-auto px-[24px] sm:px-[64px] " + myClass()
   if (bottom) {
     customClass = customClass + " mb-[80px]"
   }
@@ -57,6 +60,7 @@ export const VerticalContent = ({
                   }${srcStyles.length ? srcStyles[i] : ""}`}
                   key={i}
                   src={src}
+                  style={{ height: height }}
                 />
               ))}
             </div>
@@ -65,6 +69,7 @@ export const VerticalContent = ({
               alt="survivor UI screenshot"
               className={`mx-auto ${srcStyles[0]}`}
               src={props.src}
+              style={{ width: width }}
             />
           ))}
     </div>

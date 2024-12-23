@@ -38,7 +38,7 @@ const images = [
   { original: Journey7 },
 ]
 
-export const Survivor = () => {
+const Survivor = () => {
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [])
@@ -111,7 +111,7 @@ export const Survivor = () => {
         descriptionOne="The companion app also features various Survivor merchandise and memorabilia.  From current tribe Buffs to some of host Jeff Probst’s favorite Survivor items. This allows the user to become even more engaged in the fan experience."
         descriptionTwo={null}
         src={SurvivorMerch}
-        srcStyles={["w-[275px]"]}
+        width="275px"
       />
       <HorizontalContent
         title="To Homepage or Not to Homepage"
